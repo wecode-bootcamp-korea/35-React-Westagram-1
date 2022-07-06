@@ -1,0 +1,83 @@
+@mixin flexContainer {
+  display: flex;
+  align-items: center;
+}
+
+/* nav */
+.navwrap {
+  @include flexContainer();
+  position: fixed;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #fafafa;
+  background-color: #ffffff;
+  z-index: 50;
+
+  .navbar {
+    @include flexContainer();
+    justify-content: space-between;
+    width: 975px;
+    margin: 15px;
+  }
+
+  /* nav > left (logo) */
+  .logo {
+    @include flexContainer();
+    justify-content: flex-start;
+
+    .logo-text {
+      font-family: 'Lobster', cursive;
+      font-size: 25px;
+    }
+  }
+
+  /* nav > middle (search) */
+  .search {
+    @include flexContainer();
+
+    img {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      margin-left: 13px;
+      z-index: 10;
+    }
+
+    input {
+      position: relative;
+      width: 268px;
+      height: 36px;
+      padding-left: 40px;
+      background-color: #efefef;
+      border: none;
+      border-radius: 10px;
+      font-weight: 100;
+      font-size: 16px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  /* nav > right (icons) */
+  .icons {
+    @include flexContainer();
+    justify-content: space-evenly;
+    width: 270px;
+
+    a {
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .profile {
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
