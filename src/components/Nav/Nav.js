@@ -15,25 +15,25 @@ const Nav = () => {
           <input type="text" placeholder="검색" />
         </div>
         <div className="icons">
-          <a>
+          <a href="/">
             <img
               alt="Home icon"
               src="/images/house-black-silhouette-without-door.png"
             />
           </a>
-          <a>
+          <a href="/">
             <img alt="Send icon" src="/images/send.png" />
           </a>
-          <a>
+          <a href="/">
             <img alt="Add icon" src="/images/add.png" />
           </a>
-          <a>
+          <a href="/">
             <img alt="Compass icon" src="/images/compass.png" />
           </a>
-          <a>
+          <a href="/">
             <img alt="Like icon" src="/images/like.png" />
           </a>
-          <a>
+          <a href="/">
             <span className="profile">
               <img alt="profile" src="/images/profile.JPG" />
             </span>
