@@ -1,0 +1,427 @@
+// @mixin flexContainer {
+//   display: flex;
+//   align-items: center;
+// }
+
+// @mixin profileImgSize {
+//   width: 24px;
+//   height: 24px;
+// }
+
+// .profile img {
+//   @include profileImgSize();
+//   border: 0.3px solid black;
+//   border-radius: 50%;
+// }
+
+// .user-img {
+//   @include flexContainer();
+//   justify-content: center;
+//   width: 58px;
+//   height: 58px;
+
+//   img {
+//     width: 32px;
+//     height: 32px;
+//     border: 2px solid #ff442f;
+//     border-radius: 50%;
+//     cursor: pointer;
+//   }
+// }
+
+// .user-id {
+//   font-weight: 600;
+// }
+
+// .active {
+//   opacity: 1;
+//   cursor: pointer;
+// }
+
+// /* nav */
+// .navwrap {
+//   @include flexContainer();
+//   position: fixed;
+//   justify-content: center;
+//   width: 100%;
+//   height: 60px;
+//   border-bottom: 1px solid var(--border-color);
+//   background-color: var(--inner-background-color);
+//   z-index: 50;
+
+//   .navbar {
+//     @include flexContainer();
+//     justify-content: space-between;
+//     width: 975px;
+//     margin: 15px;
+//   }
+
+//   /* nav > left (logo) */
+//   .logo {
+//     @include flexContainer();
+//     justify-content: flex-start;
+
+//     .logo-text {
+//       font-family: "Lobster", cursive;
+//       font-size: 25px;
+//     }
+//   }
+
+//   /* nav > middle (search) */
+//   .search {
+//     @include flexContainer();
+
+//     img {
+//       position: absolute;
+//       width: 20px;
+//       height: 20px;
+//       margin-left: 13px;
+//       z-index: 10;
+//     }
+
+//     input {
+//       position: relative;
+//       width: 268px;
+//       height: 36px;
+//       padding-left: 40px;
+//       background-color: #efefef;
+//       border: none;
+//       border-radius: 10px;
+//       font-weight: 100;
+//       font-size: 16px;
+
+//       &:focus {
+//         outline: none;
+//       }
+//     }
+//   }
+
+//   /* nav > right (icons) */
+//   .icons {
+//     @include flexContainer();
+//     justify-content: space-evenly;
+//     width: 270px;
+
+//     a {
+//       img {
+//         width: 24px;
+//         height: 24px;
+//       }
+//     }
+//   }
+// }
+
+// /* main */
+// main {
+//   position: relative;
+//   justify-content: center;
+//   display: flex;
+//   padding-top: 100px;
+
+//   .feeds {
+//     @include flexContainer();
+//     flex-direction: column;
+
+//     .article {
+//       @include flexContainer();
+//       flex-direction: column;
+//       max-width: 470px;
+//       margin-bottom: 20px;
+//       background-color: var(--inner-background-color);
+//       border: 1px solid var(--border-color);
+//       border-radius: 8px;
+
+//       /* top */
+//       .top {
+//         @include flexContainer();
+//         position: relative;
+//         width: 100%;
+//         height: 58px;
+
+//         .more {
+//           @include flexContainer();
+//           position: absolute;
+//           right: 20px;
+//           bottom: 20px;
+//           background: none;
+//           border: none;
+//           font-size: 25px;
+//           cursor: pointer;
+//         }
+//       }
+
+//       /* middle */
+//       .middle {
+//         img {
+//           width: 100%;
+//           max-height: 587px;
+//           object-fit: cover;
+//         }
+//       }
+
+//       /* bottom */
+//       .bottom {
+//         width: 100%;
+//         padding: 11px 11px 0 11px;
+//         font-size: 15px;
+
+//         /* .img-bottom-icons */
+//         .img-bottom-icons {
+//           @include flexContainer();
+//           justify-content: space-between;
+
+//           img {
+//             @include profileImgSize();
+
+//             &:nth-child(n):hover {
+//               opacity: 0.5;
+//               cursor: pointer;
+//             }
+//           }
+
+//           .left-icons {
+//             @include flexContainer();
+//             justify-content: space-between;
+//             width: 91px;
+//           }
+//         }
+
+//         /* likes */
+//         .likes {
+//           @include flexContainer();
+
+//           height: 45px;
+
+//           .who-likes {
+//             margin-left: 5px;
+//           }
+//         }
+
+//         /* contents, comments */
+
+//         .contents,
+//         .comments {
+//           margin-bottom: 4px;
+//           font-size: 14px;
+//           font-family: "Noto Sans KR", sans-serif;
+
+//           .details {
+//             margin-left: 3px;
+//             line-height: 120%;
+//             font-family: "Noto Sans KR", sans-serif;
+//           }
+//         }
+
+//         /* time-ago */
+//         .time-ago {
+//           margin: 15px 0;
+//           color: gray;
+//           font-size: 11px;
+//         }
+
+//         /* input-comments */
+//         .input-comments {
+//           @include flexContainer();
+
+//           justify-content: space-between;
+//           width: 100%;
+//           height: 49px;
+//           border-top: 1px solid var(--border-color);
+
+//           img {
+//             width: 31px;
+//           }
+
+//           .do-input {
+//             width: 100%;
+//             margin: 0 5px;
+//             border: none;
+
+//             &:focus {
+//               outline: none;
+//             }
+//           }
+
+//           .input-button {
+//             width: 30px;
+//             background: none;
+//             color: #0095f6;
+//             border: none;
+//             font-weight: 600;
+//             opacity: 0.5;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   /* main-right */
+
+//   .main-right {
+//     flex-direction: column;
+//     position: sticky;
+//     width: 319px;
+//     top: 100px;
+//     height: 700px;
+//     margin-left: 20px;
+
+//     /* user */
+//     .user {
+//       @include flexContainer();
+//       width: 100%;
+//       margin-bottom: 20px;
+
+//       :nth-child(n) {
+//         margin-left: 5px;
+//       }
+
+//       .user-img-big img {
+//         width: 56px;
+//         height: 56px;
+//         border: none;
+//         border-radius: 50%;
+//         cursor: pointer;
+//       }
+
+//       .user-info {
+//         @include flexContainer();
+//         flex-direction: column;
+//         align-items: flex-start;
+
+//         .location {
+//           padding-top: 5px;
+//           color: gray;
+//           font-size: 14px;
+//         }
+//       }
+//     }
+
+//     /* right-container */
+//     .right-container {
+//       @include flexContainer();
+
+//       flex-direction: column;
+//       width: 319px;
+//       margin-top: 10px;
+
+//       /* header  */
+//       .header {
+//         @include flexContainer();
+//         justify-content: space-between;
+//         width: 100%;
+//         padding: 10px;
+
+//         div {
+//           &:first-child {
+//             color: gray;
+//             font-weight: 600;
+//             font-size: 14px;
+//           }
+
+//           &:last-child {
+//             color: black;
+//             font-weight: 600;
+//             font-size: 12px;
+//             cursor: pointer;
+//           }
+//         }
+//       }
+
+//       /* followlist */
+//       .followlist {
+//         @include flexContainer();
+//         flex-direction: column;
+//         width: 100%;
+//         height: 320px;
+//         overflow-y: scroll;
+
+//         &::-webkit-scrollbar {
+//           display: none;
+//         }
+
+//         .users {
+//           @include flexContainer();
+//           justify-content: flex-start;
+//           position: relative;
+//           width: 100%;
+
+//           .user-img {
+//             @include flexContainer();
+//           }
+
+//           .user-details {
+//             padding-top: 5px;
+//             color: gray;
+//             font-size: 12px;
+//           }
+
+//           .follow {
+//             position: absolute;
+//             right: 10px;
+//             color: #0095f6;
+//             font-size: 12px;
+//             font-weight: 600;
+//             cursor: pointer;
+//           }
+//         }
+//       }
+//     }
+//     /* footer */
+//     .footer {
+//       margin: 20px 0;
+//       color: lightgray;
+//       font-size: 12px;
+
+//       .gray-text li {
+//         display: inline-block;
+//         width: fit-content;
+//         margin-bottom: 5px;
+//       }
+
+//       div {
+//         margin-top: 20px;
+//         font-size: 12px;
+//       }
+//     }
+//   }
+// }
+
+// /* Responsive */
+
+// /* 우측 아이디 추천 섹션 삭제 */
+// @media screen and (max-width: 1000px) {
+//   .main-right {
+//     display: none;
+//   }
+// }
+
+// /* 검색창 삭제 */
+// @media screen and (max-width: 710px) {
+//   .navwrap .navbar .search {
+//     display: none;
+//   }
+// }
+
+// /* 피드 반응형 - 모바일 */
+// @media screen and (max-width: 401px) {
+//   .feeds .article {
+//     width: 100vw;
+
+//     .middle img {
+//       width: 100%;
+//     }
+//   }
+
+//   .navwrap .navbar .icons {
+//     width: 108px;
+//     justify-content: space-between;
+
+//     a {
+//       &:nth-child(1),
+//       &:nth-child(4),
+//       &:nth-child(6) {
+//         display: none;
+//       }
+//     }
+//   }
+// }

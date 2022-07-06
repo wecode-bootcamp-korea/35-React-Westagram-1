@@ -1,0 +1,74 @@
+@mixin flexColumnContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  @include flexColumnContainer();
+  align-items: center;
+  width: 525px;
+  height: 700px;
+  margin: 100px auto;
+  background-color: var(--inner-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 1px;
+
+  .logo {
+    h1 {
+      @include flexColumnContainer();
+      justify-content: center;
+      height: 200px;
+      font-size: 60px;
+      font-family: "Lobster", cursive;
+    }
+  }
+
+  .login-form {
+    @include flexColumnContainer();
+    align-items: center;
+    height: 400px;
+    border-radius: 1px;
+
+    .login-id,
+    .login-pw {
+      width: 380px;
+      height: 55px;
+      margin-bottom: 20px;
+      padding-left: 10px;
+      background-color: var(--background-color);
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      font-size: 17px;
+      font-weight: 200;
+
+      &:focus {
+        outline: 1px solid #a4a4a4;
+      }
+    }
+
+    .login-button {
+      width: 380px;
+      height: 45px;
+      margin: 20px 0;
+      background-color: #0095f6;
+      color: white;
+      border: none;
+      border-radius: 7px;
+      font-size: 20px;
+      font-weight: bold;
+      opacity: 0.5;
+    }
+
+    .active {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+
+  .forget-pw {
+    a {
+      height: 100px;
+      text-align: center;
+    }
+  }
+}
