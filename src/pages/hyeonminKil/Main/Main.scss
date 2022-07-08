@@ -1,0 +1,216 @@
+.body {
+  margin: 0;
+  background-color: #fafafa;
+
+  .top {
+    display: flex;
+    justify-content: center;
+    border-bottom: #7e7e7e 1px solid;
+    background-color: white;
+
+    .topNav {
+      width: 975px;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      input:focus {
+        outline: none;
+      }
+
+      .westagram {
+        font-family: "Lobster", cursive;
+        font-size: 40px;
+      }
+
+      .search {
+        position: relative;
+      }
+
+      .finderIcon {
+        width: 22px;
+        position: absolute;
+        left: 17px;
+        top: 8px;
+        opacity: 0.5;
+      }
+
+      .search input {
+        padding-left: 50px;
+        width: 268px;
+        height: 36px;
+        border-radius: 10px;
+        background-color: #e5e5e5;
+        border: none;
+        color: #7e7e7e;
+        font-size: 15px;
+      }
+
+      .navIcon img {
+        width: 25px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  main {
+    width: 975px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .firstArticle {
+      width: 470px;
+      border: solid 1px #c5c4c4;
+      border-radius: 10px;
+      margin-top: 50px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 50px;
+
+      .firstArticleFirstBox {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        font-weight: bolder;
+      }
+
+      .firstArticleUserIcon {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        padding: 3px;
+        border: solid 2px red;
+      }
+
+      .firstArticlFirstBoxIcon {
+        position: relative;
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+
+      .bookMark {
+        position: absolute;
+        right: 10px;
+      }
+
+      .firstArticlFirstBoxIcon img {
+        width: 30px;
+        margin-left: 10px;
+      }
+
+      .firstArticlesecondBoxUser {
+        width: 100%;
+      }
+
+      .commentList {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+      }
+
+      .commentList div {
+        position: relative;
+      }
+
+      .commentList img {
+        width: 25px;
+        position: absolute;
+        top: 8px;
+        right: 40px;
+      }
+
+      .commentList button {
+        position: absolute;
+        top: 8px;
+        right: 0px;
+        border: none;
+        color: blue;
+        background-color: white;
+        padding: none;
+      }
+
+      .comment {
+        position: relative;
+      }
+
+      .commentInput {
+        width: 470px;
+        height: 40px;
+        box-sizing: border-box;
+        border: none;
+        border-top: 1px solid gray;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 20px;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      .commentButton {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        background-color: white;
+        color: rgb(162, 224, 255);
+        border: none;
+      }
+    }
+
+    .mainRight {
+      position: sticky;
+      top: 100px;
+      width: 300px;
+      height: 400px;
+      margin-left: 30px;
+      display: flex;
+      flex-direction: column;
+
+      .mainRightUser {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .mainRightUserUserName {
+          display: flex;
+          flex-direction: column;
+          margin-right: 40px;
+        }
+        .mainRightUserUserIcon {
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      .suggestionText {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .suggestionFirstUser {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+
+      .suggestionFirstUserText {
+        font-size: 12px;
+        margin-right: 80px;
+      }
+
+      .suggestionFirstUser img {
+        width: 40px;
+        height: 40px;
+        border: solid 1px #9c9c9c;
+        border-radius: 50%;
+      }
+    }
+  }
+}
