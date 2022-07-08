@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 function Login() {
   const navigate = useNavigate();
   const goToMain = () => {
-    navigate('/main');
+    navigate('/main-hyeonmin');
   };
   const [valueTrue, setValueTrue] = useState('rgb(162, 224, 255)');
   const [idvalue, setIdvlaue] = useState('');
@@ -40,7 +40,7 @@ function Login() {
     <div className="login">
       <section className="wrapper">
         <span className="loginWestagram">
-          <Link to="/main">Westagram</Link>
+          <Link to="/main-hyeonmin">Westagram</Link>
         </span>
         <input
           className="idInput"
