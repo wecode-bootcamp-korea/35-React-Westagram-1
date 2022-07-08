@@ -110,7 +110,7 @@ function Main() {
             <div className="commentList" />
             <div className="comment">
               <input className="commentInput" placeholder="댓글 달기..." />
-              <input type="button" className="commentButton" value={'게시'} />
+              <input type="button" className="commentButton" value="게시" />
             </div>
           </article>
         </div>
