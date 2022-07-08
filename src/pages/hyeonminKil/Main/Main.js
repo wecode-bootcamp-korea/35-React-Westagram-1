@@ -1,6 +1,5 @@
-import React from "react";
-//import { Link } from "react-router-dom";
-import "./Main.scss";
+import React from 'react';
+import './Main.scss';
 
 function Main() {
   return (
@@ -92,18 +91,18 @@ function Main() {
             </div>
             <span
               style={{
-                fontWeight: "bold",
-                margin: "10px 0px 0px 10px",
-                fontSize: "14px",
+                fontWeight: 'bold',
+                margin: '10px 0px 0px 10px',
+                fontSize: '14px',
               }}
             >
               좋아요 393개
             </span>
             <span
               style={{
-                fontWeight: "bolder",
-                margin: "10px 0px 0px 10px",
-                fontSize: "14px",
+                fontWeight: 'bolder',
+                margin: '10px 0px 0px 10px',
+                fontSize: '14px',
               }}
             >
               kakaofriends_official
@@ -127,14 +126,14 @@ function Main() {
               alt="mainRightUserUserIcon"
             />
             <div className="mainRightUserUserName">
-              <span style={{ fontWeight: "bolder" }}>gilhyeonmin98</span>
-              <span style={{ color: "#979797" }}>길현민</span>
+              <span style={{ fontWeight: 'bolder' }}>gilhyeonmin98</span>
+              <span style={{ color: '#979797' }}>길현민</span>
             </div>
             <p
               style={{
-                color: "rgb(0, 174, 255)",
-                fontSize: "13px",
-                fontWeight: "bolder",
+                color: 'rgb(0, 174, 255)',
+                fontSize: '13px',
+                fontWeight: 'bolder',
               }}
             >
               전환
@@ -143,14 +142,14 @@ function Main() {
           <div className="suggestionText">
             <p
               style={{
-                color: "#777777",
-                fontSize: "15px",
-                fontWeight: "bolder",
+                color: '#777777',
+                fontSize: '15px',
+                fontWeight: 'bolder',
               }}
             >
               회원님을 위한 추천
             </p>
-            <p style={{ fontSize: "15px", fontWeight: "bolder" }}>모두 보기</p>
+            <p style={{ fontSize: '15px', fontWeight: 'bolder' }}>모두 보기</p>
           </div>
           <div className="suggestionFirstUser">
             <img
@@ -158,16 +157,16 @@ function Main() {
               alt="suggestionFirstUser"
             />
             <div className="suggestionFirstUserText">
-              <p style={{ fontWeight: "bolder", margin: "0" }}>라이언</p>
-              <p style={{ color: "gray", margin: "0" }}>
+              <p style={{ fontWeight: 'bolder', margin: '0' }}>라이언</p>
+              <p style={{ color: 'gray', margin: '0' }}>
                 회원님을 팔로우합니다
               </p>
             </div>
             <p
               style={{
-                color: "rgb(0, 174, 255)",
-                fontSize: "13px",
-                fontWeight: "bolder",
+                color: 'rgb(0, 174, 255)',
+                fontSize: '13px',
+                fontWeight: 'bolder',
               }}
             >
               팔로우
@@ -179,16 +178,16 @@ function Main() {
               alt="suggestionFirstUser"
             />
             <div className="suggestionFirstUserText">
-              <p style={{ fontWeight: "bolder", margin: "0" }}>무지</p>
-              <p style={{ color: "gray", margin: "0" }}>
+              <p style={{ fontWeight: 'bolder', margin: '0' }}>무지</p>
+              <p style={{ color: 'gray', margin: '0' }}>
                 회원님을 팔로우합니다
               </p>
             </div>
             <p
               style={{
-                color: "rgb(0, 174, 255)",
-                fontSize: "13px",
-                fontWeight: "bolder",
+                color: 'rgb(0, 174, 255)',
+                fontSize: '13px',
+                fontWeight: 'bolder',
               }}
             >
               팔로우
@@ -200,16 +199,16 @@ function Main() {
               alt="suggestionFirstUser"
             />
             <div className="suggestionFirstUserText">
-              <p style={{ fontWeight: "bolder", margin: "0" }}>네오</p>
-              <p style={{ color: "gray", margin: "0" }}>
+              <p style={{ fontWeight: 'bolder', margin: '0' }}>네오</p>
+              <p style={{ color: 'gray', margin: '0' }}>
                 회원님을 팔로우합니다
               </p>
             </div>
             <p
               style={{
-                color: "rgb(0, 174, 255)",
-                fontSize: "13px",
-                fontWeight: "bolder",
+                color: 'rgb(0, 174, 255)',
+                fontSize: '13px',
+                fontWeight: 'bolder',
               }}
             >
               팔로우
@@ -221,16 +220,16 @@ function Main() {
               alt="suggestionFirstUser"
             />
             <div className="suggestionFirstUserText">
-              <p style={{ fontWeight: "bolder", margin: "0" }}>튜브</p>
-              <p style={{ color: "gray", margin: "0" }}>
+              <p style={{ fontWeight: 'bolder', margin: '0' }}>튜브</p>
+              <p style={{ color: 'gray', margin: '0' }}>
                 회원님을 팔로우합니다
               </p>
             </div>
             <p
               style={{
-                color: "rgb(0, 174, 255)",
-                fontSize: "13px",
-                fontWeight: "bolder",
+                color: 'rgb(0, 174, 255)',
+                fontSize: '13px',
+                fontWeight: 'bolder',
               }}
             >
               팔로우
@@ -242,16 +241,16 @@ function Main() {
               alt="suggestionFirstUser"
             />
             <div className="suggestionFirstUserText">
-              <p style={{ fontWeight: "bolder", margin: "0" }}>춘식이</p>
-              <p style={{ color: "gray", margin: "0" }}>
+              <p style={{ fontWeight: 'bolder', margin: '0' }}>춘식이</p>
+              <p style={{ color: 'gray', margin: '0' }}>
                 회원님을 팔로우합니다
               </p>
             </div>
             <p
               style={{
-                color: "rgb(0, 174, 255)",
-                fontSize: "13px",
-                fontWeight: "bolder",
+                color: 'rgb(0, 174, 255)',
+                fontSize: '13px',
+                fontWeight: 'bolder',
               }}
             >
               팔로우
@@ -263,16 +262,16 @@ function Main() {
               alt="suggestionFirstUser"
             />
             <div className="suggestionFirstUserText">
-              <p style={{ fontWeight: "bolder", margin: "0" }}>죠르디</p>
-              <p style={{ color: "gray", margin: "0" }}>
+              <p style={{ fontWeight: 'bolder', margin: '0' }}>죠르디</p>
+              <p style={{ color: 'gray', margin: '0' }}>
                 회원님을 팔로우합니다
               </p>
             </div>
             <p
               style={{
-                color: "rgb(0, 174, 255)",
-                fontSize: "13px",
-                fontWeight: "bolder",
+                color: 'rgb(0, 174, 255)',
+                fontSize: '13px',
+                fontWeight: 'bolder',
               }}
             >
               팔로우
@@ -281,9 +280,9 @@ function Main() {
           <div className="introduce">
             <p
               style={{
-                color: "#bfbfbf",
-                wclassNameth: "200px",
-                fontSize: "12px",
+                color: '#bfbfbf',
+                wclassNameth: '200px',
+                fontSize: '12px',
               }}
             >
               소개·도움말·홍보 센터·API·채용
@@ -293,9 +292,9 @@ function Main() {
           <div className="company">
             <p
               style={{
-                color: "#bfbfbf",
-                wclassNameth: "200px",
-                fontSize: "12px",
+                color: '#bfbfbf',
+                wclassNameth: '200px',
+                fontSize: '12px',
               }}
             >
               © 2022 INSTAGRAM FROM META
