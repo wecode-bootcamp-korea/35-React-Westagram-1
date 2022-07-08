@@ -15,7 +15,6 @@ function Login() {
     setIdvlaue(event.target.value);
     let emailSearch = idvalue.indexOf('@');
     let fiveLength = passwordvalue.length;
-    console.log(fiveLength);
     if (emailSearch !== -1 && fiveLength > 5) {
       setValueTrue('blue');
       setTrueDisabled(false);
@@ -29,7 +28,6 @@ function Login() {
     setPasswordvalue(event.target.value);
     let emailSearch = idvalue.indexOf('@');
     let fiveLength = passwordvalue.length;
-    console.log(fiveLength);
     if (emailSearch !== -1 && fiveLength > 5) {
       setValueTrue('blue');
       setTrueDisabled(false);

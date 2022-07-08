@@ -107,14 +107,14 @@ function Main() {
             >
               kakaofriends_official
             </span>
-            <div className="commentList"></div>
+            <div className="commentList" />
             <div className="comment">
               <input className="commentInput" placeholder="댓글 달기..." />
               <input
                 type="button"
                 className="commentButton"
                 value="게시"
-              ></input>
+              />
             </div>
           </article>
         </div>
