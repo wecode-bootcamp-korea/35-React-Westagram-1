@@ -1,13 +1,26 @@
-import "./Login.scss";
+import './Login.scss';
 // import "../../style/common.scss";
 // import "../../style/reset.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function LoginMinjee() {
+  //Main page로 이동
   const navigate = useNavigate();
-
   const goToMain = () => {
-    navigate("/main");
+    navigate('/main-minjeeSon');
+  };
+
+  //Mission 1) Login | 사용자 입력 데이터 저장
+  const [idInput, setIdInput] = useState('');
+  const [pwInput, setPwInput] = useState('');
+
+  const handleIdInput = e => {
+    setIdInput(e.target.value);
+  };
+
+  const handlePwInput = e => {
+    setPwInput(e.target.value);
   };
 
   return (
@@ -21,18 +34,20 @@ function LoginMinjee() {
           className="login-id"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
+          onChange={handleIdInput}
         />
         <input
           id="loginPW"
           className="login-pw"
           type="password"
           placeholder="비밀번호"
+          onChange={handlePwInput}
         />
         <button
           id="loginButton"
           className="login-button"
           type="button"
-          //   disabled
+          disabled
           onClick={goToMain}
         >
           로그인
