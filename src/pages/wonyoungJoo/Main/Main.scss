@@ -253,6 +253,9 @@ $background-color: #fafafa;
 
             .feed-like-text {
               font-size: 14px;
+              .userInLikeOfFeed {
+                font-weight: 600;
+              }
             }
 
             .userOfFeed {
@@ -271,6 +274,9 @@ $background-color: #fafafa;
 
             #more {
               color: #8e8e8e;
+              &:hover {
+                cursor: pointer;
+              }
             }
             .userOfFeed {
               padding-right: 5px;

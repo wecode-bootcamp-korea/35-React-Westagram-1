@@ -1,6 +1,6 @@
 import './Main.scss';
-import { useState } from 'react';
 import Comments from './Comments';
+import { Link } from 'react-router-dom';
 
 const Story = () => {
   return (
@@ -8,6 +8,7 @@ const Story = () => {
       <img
         src="images/wonyoungJoo/default profile.jpg"
         className="profile-story"
+        alt="프로필"
       />
       <span className="user-name-story">_j0010</span>
     </div>
@@ -69,17 +70,20 @@ const Feed = () => {
         <img
           className="feed-like-user-profile"
           src="images/wonyoungJoo/default profile.jpg"
+          alt="프로필"
         />
         <div className="feed-like-text">
-          <a className="userOfFeed" id="inlike">
+          <Link to="/main-wonyoung" className="userOfFeed" id="inlike">
             __j0010
-          </a>
-          님 외 <a className="userInLikeOfFeed">302명</a>이 좋아합니다
+          </Link>
+          님 <span className="userInLikeOfFeed">외 302명</span>이 좋아합니다
         </div>
       </div>
       <div className="feed-contents-section">
-        <a className="userOfFeed">ore.zeno</a>보문역에 위치한 카페 공유...{' '}
-        <a id="more">더 보기</a>
+        <Link to="/main-wonyoung" className="userOfFeed">
+          ore.zeno
+        </Link>
+        보문역에 위치한 카페 공유... <span id="more">더 보기</span>
       </div>
       <Comments />
     </div>
