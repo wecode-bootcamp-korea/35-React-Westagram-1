@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Nav from './components/Nav/Nav';
 
 // 민지's Components
 import LoginMinjee from './pages/minjeeSon/Login/Login';
@@ -22,10 +21,9 @@ import MainWonyoung from './pages/wonyoungJoo/Main/Main';
 const Router = () => {
   return (
     <BrowserRouter>
-      <Nav />
       <Routes>
         <Route path="/login-minjee" element={<LoginMinjee />} />
-        <Route path="/main-minjeeSon" element={<MainMinjee />} />
+        <Route path="/main-minjee" element={<MainMinjee />} />
         <Route path="/login-hyeonmin" element={<LoginHyeonmin />} />
         <Route path="/main-hyeonmin" element={<MainHyeonmin />} />
         <Route path="/login-seonghun" element={<LoginSeonghun />} />
