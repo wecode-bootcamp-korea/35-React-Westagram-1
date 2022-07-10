@@ -1,11 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
 import Nav from '../../../components/Nav/Nav';
+import Comments from '../../../components/Comments/Comments';
 import './Main.scss';
 import '../../../styles/common.scss';
 import '../../../styles/reset.scss';
 
 function MainMinjee() {
+  //Mission 3) Main | 댓글 기능
   const [comments, setComments] = useState('');
   const [commentsList, setCommentsList] = useState([]);
   const [isValid, setIsValid] = useState(false);
@@ -13,6 +15,7 @@ function MainMinjee() {
   const isValidComments = e => {
     return comments ? setIsValid(true) : setIsValid(false);
   };
+
   const commentsInput = e => {
     setComments(e.target.value);
   };
@@ -73,12 +76,7 @@ function MainMinjee() {
                 <span className="details">저때가 좋았지.....^___^</span>
               </div>
               {commentsList.map((oneComment, id) => {
-                return (
-                  <div key={id} className="comments">
-                    <span className="user-id">m.minzzy</span>
-                    <span className="details">{oneComment}</span>
-                  </div>
-                );
+                return <Comments key={id} oneComment={oneComment} />;
               })}
               <div className="time-ago">1분 전</div>
               <form
@@ -360,5 +358,4 @@ function MainMinjee() {
     </div>
   );
 }
-
 export default MainMinjee;
