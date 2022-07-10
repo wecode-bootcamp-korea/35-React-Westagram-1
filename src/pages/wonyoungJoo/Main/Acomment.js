@@ -2,7 +2,7 @@ import { useState } from 'react';
 import love from '../../../assets/images/love.png';
 import liked from '../../../assets/images/liked.png';
 
-const Acomment = props => {
+const Acomment = ({ cmntList, key, deleteCmnt }) => {
   const [likeState, setlikeState] = useState(love);
   const likeComment = () => {
     likeState === love ? setlikeState(liked) : setlikeState(love);
@@ -10,7 +10,7 @@ const Acomment = props => {
   return (
     <div className="comment-container">
       <span className="userOfComment">ore.zeno</span>
-      <span className="commentOfUser">{props.cmntList.contents}</span>
+      <span className="commentOfUser">{cmntList.contents}</span>
       <span
         className="comment-like"
         onClick={() => {
@@ -23,7 +23,7 @@ const Acomment = props => {
       <span
         className="comment-delete"
         onClick={() => {
-          props.deleteCmnt(props.cmntList.id);
+          deleteCmnt(cmntList.id);
         }}
       />
     </div>
