@@ -1,13 +1,13 @@
-import "./Login.scss";
+import './Login.scss';
 // import "../../style/common.scss";
 // import "../../style/reset.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 function LoginMinjee() {
   const navigate = useNavigate();
 
   const goToMain = () => {
-    navigate("/main");
+    navigate('/main');
   };
 
   return (

@@ -1,0 +1,522 @@
+$background-color: #fafafa;
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin border() {
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: 10px;
+}
+
+@mixin story($padding, $border) {
+  background: linear-gradient(white 0 0) padding-box,
+    /*this is your grey background*/ linear-gradient(to left, #da3ecc, #ffc501)
+      border-box;
+  padding: $padding;
+  border: $border solid transparent;
+  border-radius: 60%;
+}
+
+.main {
+  nav {
+    @include flex(center, center, null);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-bottom: 0.5px solid #dbdbdb;
+
+    .nav-container {
+      @include flex(space-between, center, null);
+      width: 975px;
+      height: 55px;
+      padding: 0 20px;
+      background-color: white;
+    }
+
+    .westagram-logo-main {
+      font-family: 'Lobster', cursive;
+      font-size: 30px;
+      flex: 4;
+    }
+
+    .serch-bar-container {
+      @include flex(center, null, null);
+      flex: 3;
+      position: relative;
+
+      .search-bar {
+        width: 260px;
+        height: 37px;
+        padding: 0px 16px;
+        border: none;
+        border-radius: 10px;
+        background-color: #efefef;
+        font-size: 15px;
+
+        &::placeholder {
+          padding-left: 25px;
+          font-size: 15px;
+          font-weight: 100;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .mgnifying-glass {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translate(0, -50%);
+        opacity: 0.4;
+      }
+    }
+
+    .icon-container {
+      @include flex(flex-end, flex-end, null);
+      flex: 4;
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        margin: 10px;
+      }
+
+      .profile {
+        border-radius: 70%;
+      }
+    }
+  }
+
+  main {
+    width: 100vw;
+    background-color: $background-color;
+
+    .total-container {
+      @include flex(center, null, null);
+
+      .main-container {
+        @include flex(center, null, column);
+        margin-top: 70px;
+
+        .story-container {
+          @include flex(null, center, null);
+          overflow: hidden;
+          width: 470px;
+          height: 120px;
+          background-color: white;
+          @include border();
+
+          .user-container-story {
+            @include flex(null, null, column);
+            margin-left: 13px;
+
+            .profile-story {
+              width: 66px;
+              height: 66px;
+              @include story(2px, 3px);
+            }
+
+            .user-name-story {
+              padding-top: 5px;
+              text-align: center;
+              font-size: 12px;
+            }
+          }
+        }
+
+        .feed-main-container {
+          margin-top: 20px;
+          background-color: white;
+          @include border();
+
+          .feed-header {
+            display: flex;
+            height: 58px;
+
+            .profile-feed-section {
+              @include flex(null, center, null);
+              flex: 1;
+              margin: 20px 10px;
+
+              #profile-icon-feed {
+                width: 42px;
+                height: 42px;
+                @include story(1px, 0.18em);
+              }
+            }
+
+            .id-location-section {
+              @include flex(flex-start, flex-start, column);
+              flex: 9;
+
+              .id-in-feed {
+                @include flex(null, flex-end, null);
+                flex: 1;
+                font-size: 14px;
+                font-weight: 600;
+              }
+
+              .location-in-feed {
+                flex: 1;
+                padding-top: 2px;
+                color: #8e8e8e;
+                font-size: 12px;
+                font-weight: 400;
+              }
+            }
+
+            .more-section {
+              @include flex(center, center, null);
+              flex: 1;
+              padding-left: 10px;
+
+              #more-icon {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+
+          .feed-container {
+            width: 470px;
+            height: 587.5px;
+
+            #feed-image {
+              width: 470px;
+              height: 587.5px;
+            }
+          }
+
+          .feed-icon {
+            display: flex;
+
+            .first-icon-section {
+              @include flex(space-evenly, center, null);
+              flex: 2;
+              width: 100%;
+              height: 40px;
+
+              span {
+                width: 30px;
+                height: 30px;
+                padding: 8px;
+              }
+
+              #like {
+                background-image: url(../../../assets/images/insta.png);
+                background-position: -26px 101px;
+              }
+
+              #reply {
+                background-image: url(../../../assets/images/insta.png);
+                background-position: -58px 100px;
+              }
+
+              #dm {
+                background-image: url(../../../assets/images/insta.png);
+                background-position: -89px 101px;
+              }
+            }
+
+            .second-icon-section {
+              @include flex(flex-end, center, null);
+              flex: 6;
+
+              #save {
+                width: 30px;
+                height: 30px;
+                padding: 8px;
+                margin-right: 10px;
+                background-image: url(../../../assets/images/insta.png);
+                background-position: -120px 101px;
+              }
+            }
+          }
+
+          .feed-like {
+            width: 100%;
+            height: 40px;
+            @include flex(null, center, null);
+
+            .feed-like-user-profile {
+              width: 24px;
+              height: 24px;
+              margin: 5px 5px 5px 15px;
+            }
+
+            .feed-like-text {
+              font-size: 14px;
+            }
+
+            .userOfFeed {
+              font-weight: 650;
+              padding-right: 5px;
+            }
+
+            #inlike {
+              padding-right: 0;
+            }
+          }
+
+          .feed-contents-section {
+            padding-left: 15px;
+            font-size: 14px;
+
+            #more {
+              color: #8e8e8e;
+            }
+            .userOfFeed {
+              padding-right: 5px;
+              font-weight: 650;
+            }
+          }
+
+          .feed-comment {
+            margin-top: 8px;
+            .comment-container {
+              @include flex(flex-start, center, null);
+              flex-wrap: wrap;
+              width: 470px;
+              height: auto;
+              padding-left: 15px;
+              font-size: 14px;
+
+              .userOfComment {
+                padding: 0 5px 5px 0;
+                font-size: 14px;
+                font-weight: 650;
+              }
+
+              .commentOfUser {
+                padding: 0 5px 5px 0;
+                width: 353px;
+              }
+
+              .comment-like {
+                width: 12px;
+                height: 12px;
+                margin: 2px;
+                background-size: cover;
+                background-image: url(../../../assets/images/love.png);
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+
+              .comment-delete {
+                width: 12px;
+                height: 12px;
+                margin: 2px;
+                background-size: cover;
+                background-image: url(../../../assets/images/delete.png);
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+
+          .feed-time {
+            width: 100%;
+            height: 30px;
+            margin-top: 10px;
+            padding: 15px;
+            font-size: 10px;
+            color: #8e8e8e;
+          }
+
+          .feed-comment-box-section {
+            @include flex(null, center, null);
+            width: 100%;
+            height: 50px;
+            border-top: 0.5px solid #dbdbdb;
+
+            .emoji-icon-container {
+              @include flex(center, center, null);
+              width: 50px;
+              height: 30px;
+            }
+
+            .emoji-icon {
+              width: 20px;
+              height: 20px;
+            }
+
+            .comment-box {
+              width: 100%;
+              height: 100%;
+              border: none;
+
+              &:focus {
+                outline: none;
+              }
+            }
+
+            .comment-enter-button {
+              width: 50px;
+              height: 35px;
+              border: none;
+              border-radius: 60%;
+              background-color: white;
+              color: #0095f6;
+
+              &:hover:enabled {
+                cursor: pointer;
+              }
+
+              &:disabled {
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+      }
+
+      .aside-container {
+        @include flex(flex-start, null, column);
+        position: sticky;
+        top: 90px;
+        height: 500px;
+        margin: 30px 0 0 20px;
+
+        .aside-header {
+          @include flex(null, center, null);
+          width: 320px;
+          height: 80px;
+
+          .aside-profile-container {
+            @include flex(center, center, null);
+            flex: 1;
+
+            .aside-profile {
+              width: 56px;
+              height: 56px;
+              border-radius: 60%;
+            }
+          }
+
+          .aside-id-container {
+            flex: 2;
+            padding-left: 10px;
+
+            .aside-id {
+              font-size: 15px;
+              font-weight: 600;
+            }
+          }
+
+          .aside-change-button-container {
+            @include flex(flex-end, null, null);
+            flex: 1;
+
+            .aside-change-button {
+              border: none;
+              color: #0095f6;
+              background-color: $background-color;
+              font-size: 12px;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .aside-main {
+          @include flex(null, null, column);
+
+          .aside-recommend {
+            @include flex(null, center, null);
+            margin-bottom: 12px;
+
+            .aside-reco-forme {
+              flex: 4;
+              padding-left: 10px;
+              color: #8f8f8f;
+              font-size: 14px;
+              font-weight: 600;
+            }
+
+            .aside-reco-viewAll {
+              @include flex(center, center, null);
+              flex: 1;
+
+              .aside-viewAll-button {
+                font-size: 12px;
+                font-weight: 600;
+                background-color: $background-color;
+                border: none;
+              }
+            }
+          }
+
+          .aside-reco-user {
+            @include flex(null, center, null);
+            margin-bottom: 10px;
+
+            .reco-user-profile-container {
+              @include flex(center, center, null);
+              flex: 1;
+
+              .reco-user-profile {
+                width: 32px;
+                height: 32px;
+                border-radius: 60%;
+              }
+            }
+          }
+
+          .reco-user-container {
+            @include flex(null, null, column);
+            flex: 4;
+
+            .reco-user {
+              width: 100%;
+            }
+
+            .reco-user#id {
+              padding: 2px;
+              font-size: 14px;
+              font-weight: 600;
+            }
+
+            .reco-user#follower {
+              padding: 1px;
+              color: #8e8e8e;
+              font-size: 12px;
+            }
+          }
+
+          .reco-follow-button-container {
+            @include flex(center, center, null);
+            flex: 1;
+
+            .aside-follow-button {
+              border: none;
+              background-color: $background-color;
+              color: #0095f6;
+              font-size: 12px;
+              font-weight: 600;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
+        .aside-footer {
+          margin: 15px 0 0 10px;
+          color: #cecece;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
