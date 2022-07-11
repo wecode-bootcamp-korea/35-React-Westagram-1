@@ -5,7 +5,7 @@ import './Feed.scss';
 import '../../styles/common.scss';
 import '../../styles/reset.scss';
 
-const Feeds = ({ imgAlt, imgUrl, details }) => {
+const Feed = ({ imgAlt, imgUrl, details }) => {
   //Mission 3) Main | 댓글 기능
   const [comments, setComments] = useState('');
   const [commentsList, setCommentsList] = useState([]);
@@ -96,4 +96,4 @@ const Feeds = ({ imgAlt, imgUrl, details }) => {
   );
 };
 
-export default Feeds;
+export default Feed;
