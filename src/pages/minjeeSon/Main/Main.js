@@ -1,228 +1,32 @@
 import React from 'react';
-import { useState } from 'react';
 import Nav from '../../../components/Nav/Nav';
-import Comments from '../../../components/Comments/Comments';
+import Feed from '../../../components/Feed/Feed';
 import './Main.scss';
 import '../../../styles/common.scss';
 import '../../../styles/reset.scss';
 
 function MainMinjee() {
-  //Mission 3) Main | 댓글 기능
-  const [comments, setComments] = useState('');
-  const [commentsList, setCommentsList] = useState([]);
-  const [isValid, setIsValid] = useState(false);
-
-  const isValidComments = e => {
-    return comments ? setIsValid(true) : setIsValid(false);
-  };
-
-  const commentsInput = e => {
-    setComments(e.target.value);
-  };
-
-  const commentsSubmit = e => {
-    e.preventDefault();
-
-    setCommentsList(prevList => {
-      return [...prevList, comments];
-    });
-    setComments('');
-  };
-
   return (
     <div className="main-minjee">
       <Nav />
       <main>
         <div className="feeds">
-          <article className="article">
-            <div className="top">
-              <div className="user-img">
-                <img alt="profile" src="/images/profile.JPG" />
-              </div>
-              <div className="user-id">m.minzzy</div>
-              <button className="more">
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
-              </button>
-            </div>
-            <div className="middle">
-              <img
-                alt="by mj, on Nov 17, 2021. Standing in front of brick wall. Feed sample 1."
-                src="/images/feed-image.jpg"
-              />
-            </div>
-            <div className="bottom">
-              <div className="img-bottom-icons">
-                <div className="left-icons">
-                  <img alt="likes-heart" src="/images/like.png" />
-                  <img alt="comments" src="/images/chat.png" />
-                  <img alt="share" src="/images/send.png" />
-                </div>
-                <div className="right-icons">
-                  <img alt="bookmark" src="/images/bookmark.png" />
-                </div>
-              </div>
-              <div className="likes">
-                <div className="profile">
-                  <img alt="user of likes" src="/images/profile.JPG" />
-                </div>
-                <div className="who-likes">
-                  <b>m.minzzy</b>님 외 <b>100명</b>이 좋아합니다.
-                </div>
-              </div>
-              <div className="contents">
-                <span className="user-id">m.minzzy</span>
-                <span className="details">저때가 좋았지.....^___^</span>
-              </div>
-              {commentsList.map((oneComment, id) => {
-                return <Comments key={id} oneComment={oneComment} />;
-              })}
-              <div className="time-ago">1분 전</div>
-              <form
-                className="input-comments"
-                onSubmit={commentsSubmit}
-                onKeyUp={isValidComments}
-              >
-                <img alt="comments imoji" src="/images/smile.png" />
-                <input
-                  className="do-input"
-                  type="text"
-                  placeholder="댓글 달기..."
-                  value={comments}
-                  onChange={commentsInput}
-                />
-                <button
-                  className={'input-button' + (isValid ? ' active' : '')}
-                  disabled={isValid ? false : true}
-                >
-                  게시
-                </button>
-              </form>
-            </div>
-          </article>
-          <article className="article">
-            <div className="top">
-              <div className="user-img">
-                <img alt="profile" src="/images/profile.JPG" />
-              </div>
-              <div className="user-id">m.minzzy</div>
-              <button className="more">
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
-              </button>
-            </div>
-            <div className="middle">
-              <img
-                alt="by mj, on Oct 18, 2019. In Proto, Portugal. Feed sample 2."
-                src="/images/feed-image2.jpg"
-              />
-            </div>
-            <div className="bottom">
-              <div className="img-bottom-icons">
-                <div className="left-icons">
-                  <img alt="likes-heart" src="/images/like.png" />
-                  <img alt="comments" src="/images/chat.png" />
-                  <img alt="share" src="/images/send.png" />
-                </div>
-                <div className="right-icons">
-                  <img alt="bookmark" src="/images/bookmark.png" />
-                </div>
-              </div>
-              <div className="likes">
-                <div className="profile">
-                  <img alt="user of likes" src="/images/profile.JPG" />
-                </div>
-                <div className="who-likes">
-                  <b>m.minzzy</b>님 외 <b>7,339,495명</b>이 좋아합니다.
-                </div>
-              </div>
-              <div className="contents">
-                <span className="user-id">m.minzzy</span>
-                <span className="details">
-                  저때가 좋았지.....^___^22222
-                  <br />
-                  코로나 직전 문 닫고 다녀온 포르투갈 & 스페인 여행ㅠ_ㅠ 그
-                  이후로 3년 동안 한국에 갇히게 될 줄은 몰랐다.
-                </span>
-              </div>
-              <div className="comments">
-                <span className="user-id">Yelihi</span>
-                <span className="details">정말 대박이군요~!</span>
-              </div>
-              <div className="time-ago">10일 전</div>
-              <form className="input-comments">
-                <img alt="comments imoji" src="/images/smile.png" />
-                <input
-                  className="do-input"
-                  type="text"
-                  placeholder="댓글 달기..."
-                />
-                <button className="input-button">게시</button>
-              </form>
-            </div>
-          </article>
-          <article className="article">
-            <div className="top">
-              <div className="user-img">
-                <img alt="profile" src="/images/profile.JPG" />
-              </div>
-              <div className="user-id">m.minzzy</div>
-              <button className="more">
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
-              </button>
-            </div>
-            <div className="middle">
-              <img
-                alt="by mj, on Apr 26, 2021. One fine day in spring. Feed sample 3."
-                src="/images/feed-image3.jpeg"
-              />
-            </div>
-            <div className="bottom">
-              <div className="img-bottom-icons">
-                <div className="left-icons">
-                  <img alt="likes-heart" src="/images/like.png" />
-                  <img alt="comments" src="/images/chat.png" />
-                  <img alt="share" src="/images/send.png" />
-                </div>
-                <div className="right-icons">
-                  <img alt="bookmark" src="/images/bookmark.png" />
-                </div>
-              </div>
-              <div className="likes">
-                <div className="profile">
-                  <img
-                    alt="user of likes"
-                    src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdqIWhH%2FbtrqmNPqhOR%2FUYNglFKHj2Jz2lJxnDUIyk%2Fimg.jpg"
-                  />
-                </div>
-                <div className="who-likes">
-                  <b>iiiindigggggo</b>님 외 <b>1004명</b>이 좋아합니다.
-                </div>
-              </div>
-              <div className="contents">
-                <span className="user-id">m.minzzy</span>
-                <span className="details">One Fine Day 💛</span>
-              </div>
-              <div className="comments">
-                <span className="user-id">iiiindigggggo</span>
-                <span className="details">화창하군요~!</span>
-              </div>
-              <div className="time-ago">1분 전</div>
-              <form className="input-comments">
-                <img alt="comments imoji" src="/images/smile.png" />
-                <input
-                  className="do-input"
-                  type="text"
-                  placeholder="댓글 달기..."
-                />
-                <button className="input-button">게시</button>
-              </form>
-            </div>
-          </article>
+          <Feed
+            imgUrl="/images/feed-image.jpg"
+            imgAlt="by mj, on Nov 17, 2021. Standing in front of brick wall. Feed sample 1."
+            details="저때가 좋았지.....^___^"
+          />
+          <Feed
+            imgUrl="/images/feed-image2.jpg"
+            imgAlt="by mj, on Oct 18, 2019. In Proto, Portugal. Feed sample 2."
+            details="코로나 직전 문 닫고 다녀온 포르투갈 & 스페인 여행ㅠ_ㅠ 그
+            이후로 3년 동안 한국에 갇히게 될 줄은 몰랐다. 여 행 가 고 ㅍ r ...⭐️"
+          />
+          <Feed
+            imgUrl="/images/feed-image3.jpeg"
+            imgAlt="by mj, on Apr 26, 2021. One fine day in spring. Feed sample 3."
+            details="One Fine Day 💛"
+          />
         </div>
         <div className="main-right">
           <div className="user">
