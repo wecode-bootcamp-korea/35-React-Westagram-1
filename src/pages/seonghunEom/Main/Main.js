@@ -201,7 +201,7 @@ const Main = () => {
                 <button>모두 보기</button>
               </div>
               <div className="story-profiles">
-                <div className="sotry-profiles-inner">
+                <div className="story-profiles-inner">
                   <div className="story-profiles-img">
                     <Link to="/">
                       <img
@@ -215,7 +215,7 @@ const Main = () => {
                     <span className="story-profiles-time">2시간 전</span>
                   </div>
                 </div>
-                <div className="sotry-profiles-inner">
+                <div className="story-profiles-inner">
                   <div className="story-profiles-img">
                     <Link to="/">
                       <img
@@ -229,7 +229,7 @@ const Main = () => {
                     <span className="story-profiles-time">3시간 전</span>
                   </div>
                 </div>
-                <div className="sotry-profiles-inner">
+                <div className="story-profiles-inner">
                   <div className="story-profiles-img">
                     <Link to="/">
                       <img
@@ -243,7 +243,7 @@ const Main = () => {
                     <span className="story-profiles-time">4시간 전</span>
                   </div>
                 </div>
-                <div className="sotry-profiles-inner">
+                <div className="story-profiles-inner">
                   <div className="story-profiles-img">
                     <Link to="">
                       <img
@@ -267,7 +267,7 @@ const Main = () => {
                 <button>모두 보기</button>
               </div>
               <div className="story-profiles">
-                <div className="sotry-profiles-inner">
+                <div className="story-profiles-inner">
                   <div className="story-profiles-img">
                     <Link to="/">
                       <img
@@ -282,7 +282,7 @@ const Main = () => {
                   </div>
                   <button>팔로우</button>
                 </div>
-                <div className="sotry-profiles-inner">
+                <div className="story-profiles-inner">
                   <div className="story-profiles-img">
                     <Link to="/">
                       <img
@@ -297,7 +297,7 @@ const Main = () => {
                   </div>
                   <button>팔로우</button>
                 </div>
-                <div className="sotry-profiles-inner">
+                <div className="story-profiles-inner">
                   <div className="story-profiles-img">
                     <Link to="/">
                       <img
@@ -312,7 +312,7 @@ const Main = () => {
                   </div>
                   <button>팔로우</button>
                 </div>
-                <div className="sotry-profiles-inner">
+                <div className="story-profiles-inner">
                   <div className="story-profiles-img">
                     <Link to="/">
                       <img
