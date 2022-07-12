@@ -1,7 +1,5 @@
 import React from 'react';
 import './Follow.scss';
-import '../../styles/common.scss';
-import '../../styles/reset.scss';
 
 const Follow = ({ imgUrl, userId, userDetails }) => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import './Login.scss';
 
 function LoginMinjee() {
@@ -11,25 +11,21 @@ function LoginMinjee() {
   };
 
   //Mission 1) Login | 사용자 입력 데이터 저장
-  const [idInput, setIdInput] = useState('');
-  const [pwInput, setPwInput] = useState('');
+  const [inputValue, setInputValue] = useState({
+    loginId: '',
+    loginPw: '',
+  });
 
-  const handleIdInput = e => {
-    setIdInput(e.target.value);
-  };
-
-  const handlePwInput = e => {
-    setPwInput(e.target.value);
+  const handleInput = e => {
+    const { name, value } = e.target;
+    setInputValue({ ...inputValue, [name]: value });
   };
 
   //Mission 2) Login | 로그인 버튼 활성화 (validation)
   const [isValid, setIsValid] = useState(false);
 
-  const isValidLogin = () => {
-    return idInput.includes('@') && pwInput.length >= 5
-      ? setIsValid(true)
-      : setIsValid(false);
-  };
+  const isValidLogin =
+    inputValue.loginId.includes('@') && inputValue.loginPw.length >= 5;
 
   return (
     <div className="login-minjee">
@@ -37,20 +33,26 @@ function LoginMinjee() {
         <div className="logo">
           <h1>Westagram</h1>
         </div>
-        <form id="loginForm" className="login-form" onKeyUp={isValidLogin}>
+        <form
+          id="loginForm"
+          className="login-form"
+          onKeyUp={() => setIsValid(isValidLogin)}
+        >
           <input
             id="loginId"
             className="login-id"
             type="text"
+            name="loginId"
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            onChange={handleIdInput}
+            onChange={handleInput}
           />
           <input
             id="loginPW"
             className="login-pw"
             type="password"
+            name="loginPw"
             placeholder="비밀번호"
-            onChange={handlePwInput}
+            onChange={handleInput}
           />
           <button
             id="loginButton"
@@ -63,7 +65,7 @@ function LoginMinjee() {
           </button>
         </form>
         <div className="forget-pw">
-          <a href="/">비밀번호를 잊으셨나요?</a>
+          <Link to="/main-minjee">비밀번호를 잊으셨나요?</Link>
         </div>
       </div>
     </div>

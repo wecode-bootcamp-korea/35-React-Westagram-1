@@ -3,8 +3,6 @@ import { useState } from 'react';
 import SettingComments from '../SettingComments/SettingComments';
 import Comments from '../Comments/Comments';
 import './Feed.scss';
-import '../../styles/common.scss';
-import '../../styles/reset.scss';
 
 const Feed = ({ imgAlt, imgUrl, details }) => {
   //Mission 3) Main | 댓글 기능
