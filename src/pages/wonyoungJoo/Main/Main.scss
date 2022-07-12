@@ -1,26 +1,7 @@
-$background-color: #fafafa;
-@mixin flex($justify, $align, $direction) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-  flex-direction: $direction;
-}
+@import '../../../styles/mixin.scss';
+@import '../../../styles/variables.scss';
 
-@mixin border() {
-  border: 1px solid rgb(228, 228, 228);
-  border-radius: 10px;
-}
-
-@mixin story($padding, $border) {
-  background: linear-gradient(white 0 0) padding-box,
-    /*this is your grey background*/ linear-gradient(to left, #da3ecc, #ffc501)
-      border-box;
-  padding: $padding;
-  border: $border solid transparent;
-  border-radius: 60%;
-}
-
-.main {
+.main-wonyoung {
   nav {
     @include flex(center, center, null);
     position: fixed;
@@ -111,7 +92,7 @@ $background-color: #fafafa;
           width: 470px;
           height: 120px;
           background-color: white;
-          @include border();
+          @include border(10px);
 
           .user-container-story {
             @include flex(null, null, column);
@@ -134,7 +115,7 @@ $background-color: #fafafa;
         .feed-main-container {
           margin-top: 20px;
           background-color: white;
-          @include border();
+          @include border(10px);
 
           .feed-header {
             display: flex;
@@ -209,17 +190,17 @@ $background-color: #fafafa;
                 padding: 8px;
               }
 
-              #like {
+              .like {
                 background-image: url(../../../assets/images/insta.png);
                 background-position: -26px 101px;
               }
 
-              #reply {
+              .reply {
                 background-image: url(../../../assets/images/insta.png);
                 background-position: -58px 100px;
               }
 
-              #dm {
+              .dm {
                 background-image: url(../../../assets/images/insta.png);
                 background-position: -89px 101px;
               }
@@ -288,7 +269,6 @@ $background-color: #fafafa;
             margin-top: 8px;
             .comment-container {
               @include flex(flex-start, center, null);
-              flex-wrap: wrap;
               width: 470px;
               height: auto;
               padding-left: 15px;
@@ -301,8 +281,8 @@ $background-color: #fafafa;
               }
 
               .commentOfUser {
-                padding: 0 5px 5px 0;
-                width: 353px;
+                flex: 5;
+                padding: 0 0 10px 0;
               }
 
               .comment-like {
@@ -311,6 +291,18 @@ $background-color: #fafafa;
                 margin: 2px;
                 background-size: cover;
                 background-image: url(../../../assets/images/love.png);
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+
+              .comment-liked {
+                width: 12px;
+                height: 12px;
+                margin: 2px;
+                background-size: cover;
+                background-image: url(../../../assets/images/liked.png);
 
                 &:hover {
                   cursor: pointer;

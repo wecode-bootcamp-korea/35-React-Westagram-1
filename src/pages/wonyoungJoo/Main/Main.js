@@ -1,6 +1,5 @@
+import Feed from './Feed';
 import './Main.scss';
-import Comments from './Comments';
-import { Link } from 'react-router-dom';
 
 const Story = () => {
   return (
@@ -24,68 +23,6 @@ const Stories = () => {
       <Story />
       <Story />
       <Story />
-    </div>
-  );
-};
-
-const Feed = () => {
-  return (
-    <div className="feed-main-container">
-      <div className="feed-header">
-        <div className="profile-feed-section">
-          <img
-            src="images/wonyoungJoo/profile.jpg"
-            id="profile-icon-feed"
-            alt="프로필사진"
-          />
-        </div>
-        <div className="id-location-section">
-          <div className="id-in-feed">ore.zeno</div>
-          <div className="location-in-feed">카페 공유</div>
-        </div>
-        <div className="more-section">
-          <img src="images/wonyoungJoo/more.png" alt="더보기" id="more-icon" />
-        </div>
-      </div>
-      <div className="feed-main">
-        <div className="feed-container">
-          <img
-            src="images/wonyoungJoo/feed.JPG"
-            alt="피드이미지"
-            id="feed-image"
-          />
-        </div>
-      </div>
-      <div className="feed-icon">
-        <div className="first-icon-section">
-          <span id="like" />
-          <span id="reply" />
-          <span id="dm" />
-        </div>
-        <div className="second-icon-section">
-          <span id="save" />
-        </div>
-      </div>
-      <div className="feed-like">
-        <img
-          className="feed-like-user-profile"
-          src="images/wonyoungJoo/default profile.jpg"
-          alt="프로필"
-        />
-        <div className="feed-like-text">
-          <Link to="/main-wonyoung" className="userOfFeed" id="inlike">
-            __j0010
-          </Link>
-          님 <span className="userInLikeOfFeed">외 302명</span>이 좋아합니다
-        </div>
-      </div>
-      <div className="feed-contents-section">
-        <Link to="/main-wonyoung" className="userOfFeed">
-          ore.zeno
-        </Link>
-        보문역에 위치한 카페 공유... <span id="more">더 보기</span>
-      </div>
-      <Comments />
     </div>
   );
 };
@@ -233,7 +170,7 @@ const Aside = () => {
 
 function Main() {
   return (
-    <div className="main">
+    <div className="main-wonyoung">
       <main>
         <div className="total-container">
           <div className="main-container">

@@ -1,5 +1,5 @@
-$border-color: rgb(228, 228, 228);
-$background-color: #fafafa;
+@import '../../../styles/mixin.scss';
+@import '../../../styles/variables.scss';
 
 @mixin flex($justufy, $align, $direction) {
   display: flex;
@@ -7,12 +7,13 @@ $background-color: #fafafa;
   align-items: $align;
   flex-direction: $direction;
 }
-@mixin border($color) {
-  border: 1px solid $color;
+@mixin border($radius) {
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: $radius;
 }
 
 .login-wonyoung {
-  .container {
+  .login-main {
     @include flex(center, null, null);
     background-color: $background-color;
 
@@ -21,7 +22,7 @@ $background-color: #fafafa;
       height: 400px;
       width: 350px;
       background-color: white;
-      @include border($border-color);
+      @include border(0);
 
       .westagram-logo-login {
         font-family: 'Lobster', cursive;
@@ -36,7 +37,7 @@ $background-color: #fafafa;
         padding: 10px 7px;
         margin-bottom: 10px;
         border-radius: 3px;
-        @include border($border-color);
+        @include border(3px);
         background-color: $background-color;
 
         &::placeholder {

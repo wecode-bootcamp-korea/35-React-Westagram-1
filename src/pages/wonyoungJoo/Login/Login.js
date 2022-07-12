@@ -59,7 +59,7 @@ const LoginWonyoung = () => {
   return (
     <div className="login-wonyoung">
       <header> </header>
-      <main className="container">
+      <main className="login-main">
         <Form> </Form>
       </main>
       <footer> </footer>

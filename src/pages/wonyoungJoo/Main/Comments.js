@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Acomment from './Acomment';
-let id = 1;
+let id = 4;
+let user = 'ore.zeno';
 
 const Comments = () => {
   const [onButton, setOnbutton] = useState(true);
@@ -17,7 +18,7 @@ const Comments = () => {
   const createCmnt = e => {
     e.preventDefault();
     cmnt = e.target.text.value;
-    setCmntList([...cmntList, { id: id, contents: cmnt }]);
+    setCmntList([...cmntList, { id: id, user: user, contents: cmnt }]);
     e.target.text.value = '';
     setOnbutton(true);
     id++;
@@ -31,11 +32,19 @@ const Comments = () => {
     );
   };
 
+  useEffect(() => {
+    fetch('/data/commentData.json')
+      .then(res => res.json())
+      .then(data => {
+        setCmntList(data);
+      });
+  }, []);
+
   return (
     <>
       <div className="feed-comment">
-        {cmntList.map(object => (
-          <Acomment cmntList={object} key={object.id} deleteCmnt={deleteCmnt} />
+        {cmntList.map(cmnt => (
+          <Acomment cmnt={cmnt} deleteCmnt={deleteCmnt} key={cmnt.id} />
         ))}
       </div>
       <div className="feed-time">30분 전</div>
