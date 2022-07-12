@@ -3,16 +3,17 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Form = () => {
-  const [id, setId] = useState('');
-  const [pw, setPw] = useState('');
+  const [inputValue, setInputValue] = useState({
+    id: '',
+    pw: '',
+  });
   const navigate = useNavigate();
-  const handleIdInput = e => {
-    setId(e.target.value);
-  };
-  const handlePwInput = e => {
-    setPw(e.target.value);
+  const handleInput = e => {
+    const { name, value } = e.target;
+    setInputValue({ ...inputValue, [name]: value });
   };
   const checkValue = () => {
+    const { id, pw } = inputValue;
     return !(id.includes('@') && pw.length > 5);
   };
 
@@ -29,18 +30,20 @@ const Form = () => {
       <div className="westagram-logo-login">westagram</div>
       <input
         type="text"
+        name="id"
         className="login id-box"
         placeholder="전화번호, 사용자 이름 또는 이메일"
         onChange={e => {
-          handleIdInput(e);
+          handleInput(e);
         }}
       />
       <input
         type="password"
+        name="pw"
         className="login pw-box"
         placeholder="비밀번호"
         onChange={e => {
-          handlePwInput(e);
+          handleInput(e);
         }}
       />
       <button className="login-button" disabled={checkValue()}>
