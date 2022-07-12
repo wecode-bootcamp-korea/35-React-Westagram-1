@@ -2,8 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import './Login.scss';
-import '../../../styles/common.scss';
-import '../../../styles/reset.scss';
 
 function LoginMinjee() {
   //Main page로 이동

@@ -1,33 +1,38 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import Nav from '../../../components/Nav/Nav';
 import Feed from '../../../components/Feed/Feed';
 import Follow from '../../../components/Follow/Follow';
 import './Main.scss';
-import '../../../styles/common.scss';
-import '../../../styles/reset.scss';
 
 function MainMinjee() {
+  const [feed, setfeed] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/feed.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        setfeed(data);
+      });
+  }, []);
+
   return (
     <div className="main-minjee">
       <Nav />
       <main>
         <div className="feeds">
-          <Feed
-            imgUrl="/images/feed-image.jpg"
-            imgAlt="by mj, on Nov 17, 2021. Standing in front of brick wall. Feed sample 1."
-            details="저때가 좋았지.....^___^"
-          />
-          <Feed
-            imgUrl="/images/feed-image2.jpg"
-            imgAlt="by mj, on Oct 18, 2019. In Proto, Portugal. Feed sample 2."
-            details="코로나 직전 문 닫고 다녀온 포르투갈 & 스페인 여행ㅠ_ㅠ 그
-            이후로 3년 동안 한국에 갇히게 될 줄은 몰랐다. 여 행 가 고 ㅍ r ...⭐️"
-          />
-          <Feed
-            imgUrl="/images/feed-image3.jpeg"
-            imgAlt="by mj, on Apr 26, 2021. One fine day in spring. Feed sample 3."
-            details="One Fine Day 💛"
-          />
+          {feed.map(feed => {
+            return (
+              <Feed
+                key={feed.id}
+                imgAlt={feed.imgAlt}
+                imgUrl={feed.imgUrl}
+                details={feed.details}
+              />
+            );
+          })}
         </div>
         <div className="main-right">
           <div className="user">

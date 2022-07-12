@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import SettingComments from '../SettingComments/SettingComments';
 import Comments from '../Comments/Comments';
 import './Feed.scss';
 import '../../styles/common.scss';
@@ -59,18 +60,18 @@ const Feed = ({ imgAlt, imgUrl, details }) => {
             <img alt="user of likes" src="/images/profile.JPG" />
           </div>
           <div className="who-likes">
-            <b>m.minzzy</b>님 외 <b>{Math.round(Math.random() * 1000)}명</b>이
-            좋아합니다.
+            <b>m.minzzy</b>님 외 <b>801명</b>이 좋아합니다.
           </div>
         </div>
         <div className="contents">
           <span className="user-id">m.minzzy</span>
           <span className="details">{details}</span>
         </div>
+        <SettingComments />
         {commentsList.map((oneComment, id) => {
           return <Comments key={id} oneComment={oneComment} />;
         })}
-        <div className="time-ago">{Math.round(Math.random() * 10)}분 전</div>
+        <div className="time-ago">방금 전</div>
         <form
           className="input-comments"
           onSubmit={commentsSubmit}
