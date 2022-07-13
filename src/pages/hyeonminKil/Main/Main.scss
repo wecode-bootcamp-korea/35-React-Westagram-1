@@ -20,7 +20,7 @@
       }
 
       .westagram {
-        font-family: "Lobster", cursive;
+        font-family: 'Lobster', cursive;
         font-size: 40px;
       }
 
@@ -115,6 +115,10 @@
 
       .commentList div {
         position: relative;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
       }
 
       .commentList img {

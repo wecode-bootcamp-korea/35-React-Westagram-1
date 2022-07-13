@@ -6,6 +6,20 @@ import { useNavigate } from 'react-router-dom';
 function Login() {
   const navigate = useNavigate();
   const goToMain = () => {
+    fetch('http://10.58.4.194:8000/users/signin', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: idvalue,
+        password: passwordvalue,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.ACCESS_TOKEN) {
+          localStorage.setItem('login-token', result.ACCESS_TOKEN);
+          //console.log('결과: ', result));
+        }
+      });
     navigate('/main-hyeonmin');
   };
   const [valueTrue, setValueTrue] = useState('rgb(162, 224, 255)');
