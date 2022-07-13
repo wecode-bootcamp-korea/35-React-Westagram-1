@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 
 function LoginMinjee() {
@@ -27,12 +27,34 @@ function LoginMinjee() {
   const isValidLogin =
     inputValue.loginId.includes('@') && inputValue.loginPw.length >= 5;
 
+  //로그인 통신 실습
+  // const goToServer = () => {
+  //   fetch('http://10.58.6.69:8000/users/signin', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       email: inputValue.loginId,
+  //       password: inputValue.loginPw,
+  //     }),
+  //   })
+  //     .then(res => res.json())
+  //     .then(result => {
+  //       console.log(result);
+  //       if (result.access_token) {
+  //         localStorage.setItem('token', result.access_token);
+  //         goToMain();
+  //       } else {
+  //         alert('아이디 혹은 비밀번호가 다릅니다!!!');
+  //       }
+  //     });
+  // };
+
   return (
     <div className="login-minjee">
       <div className="container">
         <div className="logo">
           <h1>Westagram</h1>
         </div>
+        <form />
         <form
           id="loginForm"
           className="login-form"
@@ -57,7 +79,6 @@ function LoginMinjee() {
           <button
             id="loginButton"
             className={'login-button' + (isValid ? ' active' : '')}
-            type="button"
             disabled={isValid ? false : true}
             onClick={goToMain}
           >
@@ -65,7 +86,9 @@ function LoginMinjee() {
           </button>
         </form>
         <div className="forget-pw">
-          <Link to="/main-minjee">비밀번호를 잊으셨나요?</Link>
+          <a href="https://www.instagram.com/accounts/password/reset/">
+            비밀번호를 잊으셨나요?
+          </a>
         </div>
       </div>
     </div>

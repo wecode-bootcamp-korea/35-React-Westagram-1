@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 import Nav from '../../../components/Nav/Nav';
 import Feed from '../../../components/Feed/Feed';
 import Follow from '../../../components/Follow/Follow';
-import { FOLLOW_LIST } from './follow';
+import { FOLLOW_LIST } from './FOLLOW_LIST';
+import { FOOTER_LIST } from './FOOTER_LIST';
 import './Main.scss';
 
 function MainMinjee() {
@@ -19,6 +20,7 @@ function MainMinjee() {
         setFeed(data);
       });
   }, []);
+
   return (
     <div className="main-minjee">
       <Nav />
@@ -65,14 +67,9 @@ function MainMinjee() {
           </div>
           <div className="footer">
             <ul className="gray-text">
-              <li>소개 · </li>
-              <li>도움말 · </li>
-              <li>홍보센터 · </li>
-              <li>API · </li>
-              <li>채용 정보 · </li>
-              <li>개인정보처리방침 · </li>
-              <li>약관 · </li>
-              <li>위치 · </li>
+              {FOOTER_LIST.map(follow => {
+                return <li key={follow.id}>{follow.footerItem}</li>;
+              })}
               <li>언어</li>
             </ul>
             <div>ⓒ 2022 INSTAGRAM FROM META</div>
