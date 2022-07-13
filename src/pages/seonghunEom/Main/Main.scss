@@ -60,6 +60,12 @@
     outline: none;
     border: 1px solid #dbdbdb;
     border-radius: 5px;
+    background-color: #fafafa;
+    // color: #d5d5d5;
+
+    input::placeholder {
+      color: green;
+    }
   }
 
   .nav-icons a {
@@ -75,14 +81,14 @@
   }
 
   main {
-    width: 1000px;
+    width: 950px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     padding-top: 120px;
 
     .feeds {
-      width: 600px;
+      width: 550px;
       height: auto;
       background-color: #fff;
       border: 1.5px solid #e6e6e6;
@@ -90,9 +96,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-bottom: 100px;
 
       article {
-        width: 600px;
+        width: 550px;
         height: auto;
 
         .profiles {
@@ -117,10 +124,15 @@
 
           .id-text {
             font-weight: bold;
+            color: #414040;
           }
 
           .article-header-menu {
             margin-left: auto;
+
+            i {
+              color: #383838;
+            }
           }
         }
       }
@@ -128,7 +140,7 @@
       .contents {
         width: 100%;
         margin: 0 auto;
-        height: 500px;
+        height: 600px;
         overflow: hidden;
         border: 1px solid #e6e6e6;
         outline: 1px solid #e6e6e6;
@@ -151,10 +163,11 @@
 
           i {
             font-size: 23px;
-            font-weight: normal;
+            font-weight: 100;
             width: 23px;
             height: 23px;
             margin-right: 10px;
+            color: #414141;
           }
 
           i:last-child {
@@ -174,7 +187,31 @@
           padding: 10px;
           font-size: 15px;
 
+          .like-profile {
+            display: flex;
+            align-items: center;
+
+            .like-profile-myImg {
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              overflow: hidden;
+              border-radius: 50%;
+              margin-right: 8px;
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+
           .article-bold {
+            font-weight: bold;
+          }
+
+          .article-bold-child {
             font-weight: bold;
           }
         }
@@ -261,7 +298,7 @@
 
     /* aside */
     aside {
-      width: 380px;
+      width: 350px;
       height: 700px;
       background-color: #fafafa;
 
@@ -280,17 +317,28 @@
             height: 40px;
             overflow: hidden;
             border-radius: 50%;
-            border: 2px solid yellow;
 
             img {
               width: 100%;
               height: 100%;
               object-fit: cover;
+              padding: 2px;
+              border-radius: 30px;
             }
           }
 
           .article-bold {
+            font-size: 15px;
             font-weight: bold;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+          }
+
+          .article-normal {
+            font-size: 15px;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+            color: #9a9b9b;
           }
 
           button {
@@ -313,10 +361,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 5px;
 
             span {
               font-weight: bold;
-              color: #c6c6c6;
+              color: #adadad;
             }
           }
 
@@ -337,31 +386,34 @@
               overflow: hidden;
               width: 40px;
               height: 40px;
-              background-color: #0095f6;
               border-radius: 50%;
               overflow: hidden;
-              border: 2px solid red;
+              border: 2px solid rgb(246, 51, 51);
 
               img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                padding: 2px;
+                border-radius: 30px;
               }
             }
 
             .story-profiles-text span {
               display: block;
+            }
 
-              .story-profiles-id {
-                font-size: 16px;
-                font-weight: bold;
-                margin-bottom: 5px;
-              }
+            .story-profiles-id {
+              font-size: 16px;
+              font-weight: bold;
+              margin-bottom: 5px;
             }
 
             .story-profiles-time {
-              font-size: 12px;
+              font-size: 14px;
+              margin-top: 3px;
               color: #adadad;
+              font-weight: bold;
             }
           }
         }
@@ -370,15 +422,17 @@
           padding: 15px;
           border: 2px solid #e6e6e6;
           background-color: #fff;
+          margin-bottom: 20px;
 
           .story-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 5px;
 
             .story-header-title span {
-              font-weight: bold;
-              color: #c6c6c6;
+              font-weight: normal;
+              color: #8e8e8e;
             }
 
             button {
@@ -398,15 +452,16 @@
               width: 40px;
               height: 40px;
               margin-right: 10px;
-              background-color: #0095f6;
               border-radius: 50%;
               overflow: hidden;
-              border: 2px solid blue;
+              // border: 2px solid blue;
 
               img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                padding: 2px;
+                border-radius: 30px;
               }
             }
 
@@ -421,7 +476,8 @@
             }
 
             span.story-profiles-time {
-              font-size: 12px;
+              font-size: 14px;
+              font-weight: bold;
               color: #adadad;
             }
 
@@ -434,6 +490,40 @@
               font-weight: bold;
             }
           }
+        }
+      }
+
+      footer {
+        color: #8e8e8e;
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 20px;
+
+          li {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            position: relative;
+            color: #d8d8d8;
+          }
+
+          li::after {
+            content: '∙';
+            position: absolute;
+          }
+
+          li:last-child:after {
+            display: none;
+          }
+        }
+
+        .copy {
+          font-size: 14px;
+          font-weight: bold;
+          color: #b4b1b1;
         }
       }
     }

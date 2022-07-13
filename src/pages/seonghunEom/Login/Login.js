@@ -3,22 +3,18 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Login.scss';
 
 const Login = () => {
-  // 네비게이션 영역, MainPage로 이동
   const navigate = useNavigate();
   const postUserData = () => {
     navigate('/main-seonghun');
   };
-  // 아이디, 패스워드 검증 영역
   const [id, setId] = useState('');
   const checkId = e => setId(e.target.value);
   const [pw, setPw] = useState('');
   const checkPw = e => setPw(e.target.value);
-  // 버튼 활성화 영역
   const [disable, setDisable] = useState(true);
   const handleBtn = () => {
     id.includes('@') && pw.length >= 5 ? setDisable(false) : setDisable(true);
   };
-  // Login 랜더 영역
   return (
     <div className="login">
       <div className="loginCard">

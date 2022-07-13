@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Main.scss';
 import CommentBox from '../../../components/seonghunEom/CommentBox';
+import { INFO_LIST } from './FooterData';
 
 const Main = () => {
   const [inputValue, setInputValue] = useState('');
@@ -10,19 +11,19 @@ const Main = () => {
       id: 0,
       userName: 'Lvoeon_mj',
       content: '',
-      text: ' 댓글을 달아보고 싶었어!',
+      text: ' 보고싶어요 사쿠라!❣️❣️',
     },
     {
       id: 1,
       userName: 'picemake_p',
       content: ' ',
-      text: ' 위코드 만한게 없지!',
+      text: ' 르세라핌 화이팅!!!!💙',
     },
     {
       id: 2,
       userName: 'nindendo_do',
       content: '',
-      text: ' 빨간색줄 수정좀...',
+      text: ' 오늘도 💘🤎💛',
     },
   ]);
   const [nextId, setNextId] = useState(3);
@@ -59,7 +60,7 @@ const Main = () => {
           <div className="search-box">
             <form action="/">
               <label htmlFor="">
-                <input type="text" placeholder="아이디 검색" />
+                <input type="text" placeholder="검색" />
               </label>
             </form>
           </div>
@@ -102,8 +103,7 @@ const Main = () => {
                   </Link>
                 </div>
                 <div className="id-text">
-                  <span>Wecode_bootcamp</span>
-                  <span>Wecode - 위코드</span>
+                  <span>Sakura Miyawaki</span>
                 </div>
                 <div className="article-header-menu">
                   <Link to="">
@@ -131,18 +131,30 @@ const Main = () => {
               </div>
               <div className="article-bottom-like">
                 <div className="like-profile">
-                  <span className="article-bold">wecoedworld님</span>
-                  <span>외 10명이 좋아합니다.</span>
+                  <span className="like-profile-myImg">
+                    <img
+                      src="../../../../images/seonghunEom/people01.jpg"
+                      alt="profile01"
+                    />
+                  </span>
+                  <span className="article-bold">leejimin</span>님
+                  <span>
+                    <span className="article-bold-child">
+                      {' '}
+                      외 2,412,751명이
+                    </span>
+                    좋아합니다.
+                  </span>
                 </div>
               </div>
               <div className="article-bottom-texts">
                 <div>
                   <span className="article-bold">canon_mj</span>
-                  <span> 위워크에서 진행한 베이킹 클래스...</span>
+                  <span> 桜さんめっちゃやば！❤️</span>
                 </div>
                 <div>
                   <span className="article-bold">nececsoeis</span>
-                  <span> 거봐 좋았잖아~~</span>
+                  <span> IZONいつも応援してますよ！🇯🇵</span>
                 </div>
                 <div className="upload-time">
                   <span>42분 전</span>
@@ -183,13 +195,13 @@ const Main = () => {
             <div className="profiles">
               <Link to="/" className="profiles-img">
                 <img
-                  src="../../../../images/seonghunEom/people01.jpg"
+                  src="../../../../images/seonghunEom/people02.jpg"
                   alt="profile01"
                 />
               </Link>
               <div className="id-text">
-                <span className="article-bold">Wecode_bootcamp</span>
-                <span className="article-bold"> Wecode - 위코드</span>
+                <div className="article-bold">Wecode_bootcamp</div>
+                <div className="article-normal"> Wecode | 위코드</div>
               </div>
               <button>전환</button>
             </div>
@@ -205,21 +217,21 @@ const Main = () => {
                   <div className="story-profiles-img">
                     <Link to="/">
                       <img
-                        src="../../../../images/seonghunEom/people01.jpg"
+                        src="../../../../images/seonghunEom/people03.jpg"
                         alt="profile01"
                       />
                     </Link>
                   </div>
                   <div className="story-profiles-text">
                     <span className="story-profiles-id">_ims_ee</span>
-                    <span className="story-profiles-time">2시간 전</span>
+                    <span className="story-profiles-time">12시간 전</span>
                   </div>
                 </div>
                 <div className="story-profiles-inner">
                   <div className="story-profiles-img">
                     <Link to="/">
                       <img
-                        src="../../../../images/seonghunEom/people01.jpg"
+                        src="../../../../images/seonghunEom/people04.jpg"
                         alt="profile01"
                       />
                     </Link>
@@ -233,28 +245,28 @@ const Main = () => {
                   <div className="story-profiles-img">
                     <Link to="/">
                       <img
-                        src="../../../../images/seonghunEom/people01.jpg"
+                        src="../../../../images/seonghunEom/people05.jpg"
                         alt="profile01"
                       />
                     </Link>
                   </div>
                   <div className="story-profiles-text">
                     <span className="story-profiles-id">_vwv_ee</span>
-                    <span className="story-profiles-time">4시간 전</span>
+                    <span className="story-profiles-time">12분 전</span>
                   </div>
                 </div>
                 <div className="story-profiles-inner">
                   <div className="story-profiles-img">
                     <Link to="">
                       <img
-                        src="../../../../images/seonghunEom/people01.jpg"
+                        src="../../../../images/seonghunEom/people06.jpg"
                         alt="profile01"
                       />
                     </Link>
                   </div>
                   <div className="story-profiles-text">
                     <span className="story-profiles-id">_grg_ee</span>
-                    <span className="story-profiles-time">6시간 전</span>
+                    <span className="story-profiles-time">40분 전</span>
                   </div>
                 </div>
               </div>
@@ -262,7 +274,7 @@ const Main = () => {
             <div className="story-recommand">
               <div className="story-header">
                 <div className="story-header-title">
-                  <span>스토리</span>
+                  <span>회원님을 위한 추천</span>
                 </div>
                 <button>모두 보기</button>
               </div>
@@ -271,14 +283,16 @@ const Main = () => {
                   <div className="story-profiles-img">
                     <Link to="/">
                       <img
-                        src="../../../../images/seonghunEom/people01.jpg"
+                        src="../../../../images/seonghunEom/people07.jpg"
                         alt="profile01"
                       />
                     </Link>
                   </div>
                   <div className="story-profiles-text">
-                    <span className="story-profiles-id">_ims_ee</span>
-                    <span className="story-profiles-time">2시간 전</span>
+                    <span className="story-profiles-id">ironman</span>
+                    <span className="story-profiles-time">
+                      mastang님 외 2명이 좋아합니다.
+                    </span>
                   </div>
                   <button>팔로우</button>
                 </div>
@@ -286,14 +300,17 @@ const Main = () => {
                   <div className="story-profiles-img">
                     <Link to="/">
                       <img
-                        src="../../../../images/seonghunEom/people01.jpg"
+                        src="../../../../images/seonghunEom/people08.jpg"
                         alt="profile01"
                       />
                     </Link>
                   </div>
                   <div className="story-profiles-text">
-                    <span className="story-profiles-id">_qwe_ee</span>
-                    <span className="story-profiles-time">3시간 전</span>
+                    <span className="story-profiles-id">kulale</span>
+                    <span className="story-profiles-time">
+                      {' '}
+                      rokri님 외 2명이 좋아합니다.
+                    </span>
                   </div>
                   <button>팔로우</button>
                 </div>
@@ -301,14 +318,16 @@ const Main = () => {
                   <div className="story-profiles-img">
                     <Link to="/">
                       <img
-                        src="../../../../images/seonghunEom/people01.jpg"
+                        src="../../../../images/seonghunEom/people09.jpg"
                         alt="profile01"
                       />
                     </Link>
                   </div>
                   <div className="story-profiles-text">
-                    <span className="story-profiles-id">_vwv_ee</span>
-                    <span className="story-profiles-time">4시간 전</span>
+                    <span className="story-profiles-id">spaitheman</span>
+                    <span className="story-profiles-time">
+                      lee-sunsin님 외 2명이 좋아합니다.
+                    </span>
                   </div>
                   <button>팔로우</button>
                 </div>
@@ -316,20 +335,30 @@ const Main = () => {
                   <div className="story-profiles-img">
                     <Link to="/">
                       <img
-                        src="../../../../images/seonghunEom/people01.jpg"
+                        src="../../../../images/seonghunEom/people10.jpg"
                         alt="profile01"
                       />
                     </Link>
                   </div>
                   <div className="story-profiles-text">
-                    <span className="story-profiles-id">_grg_ee</span>
-                    <span className="story-profiles-time">6시간 전</span>
+                    <span className="story-profiles-id">joaaahye</span>
+                    <span className="story-profiles-time">
+                      lende_a님 외 2명이 좋아합니다.
+                    </span>
                   </div>
                   <button>팔로우</button>
                 </div>
               </div>
             </div>
           </div>
+          <footer>
+            <ul>
+              {INFO_LIST.map(info => {
+                return <li key={info.id}>{info.content}</li>;
+              })}
+            </ul>
+            <div className="copy">© 2022 INSTAGRAM FROM FACEBOOK</div>
+          </footer>
         </aside>
       </main>
     </div>
