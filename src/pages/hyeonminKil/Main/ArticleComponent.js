@@ -43,9 +43,9 @@ function ArticleJson(props) {
         />
         <p>daniel Alexander</p>
       </div>
-      <div className="firstArticlesecondBox">
+      <div className="firstArticleSecondBox">
         <img
-          className="firstArticlesecondBoxUser"
+          className="firstArticleSecondBoxUser"
           src="https://images.unsplash.com/photo-1656313836297-0cd072f08f43?ixlib=rb-1.2.1&ixclassName=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
           alt="firstArticlesecondBoxUser"
         />

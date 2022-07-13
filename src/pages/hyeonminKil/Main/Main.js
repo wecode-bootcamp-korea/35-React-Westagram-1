@@ -15,7 +15,7 @@ function Main() {
   return (
     <div className="body">
       <div className="top">
-        <nav className="topNav">
+        {/* <nav className="topNav"> 팀 네브 공용인 'Nav.js'컴퍼넌트 사용
           <span className="westagram">Westagram</span>
           <div className="search">
             <input placeholder="검색" />
@@ -57,7 +57,7 @@ function Main() {
               alt="userIcon"
             />
           </div>
-        </nav>
+        </nav> */}
       </div>
       <main>
         <div className="feeds">

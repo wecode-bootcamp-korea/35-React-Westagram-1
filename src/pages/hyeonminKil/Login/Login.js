@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
+
   const goToMain = () => {
     fetch('http://10.58.4.194:8000/users/signin', {
       method: 'POST',
@@ -22,9 +23,13 @@ function Login() {
       });
     navigate('/main-hyeonmin');
   };
+
   const [valueTrue, setValueTrue] = useState(false);
+
   const [idvalue, setIdvlaue] = useState('');
+
   const [trueDisabled, setTrueDisabled] = useState(true);
+
   const handleIdInput = event => {
     const { value } = event.target;
     setIdvlaue(value);
@@ -40,6 +45,7 @@ function Login() {
   };
 
   const [passwordvalue, setPasswordvalue] = useState('');
+
   const handlePasswordInput = event => {
     setPasswordvalue(event.target.value);
     let emailSearch = idvalue.indexOf('@');

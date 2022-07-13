@@ -1,23 +1,5 @@
-$theme-background: #d6d6d6;
-$activated: blue;
-$deactivated: rgb(162, 224, 255);
-
-@mixin flex-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@mixin loginbutton {
-  width: 268px;
-  height: 30px;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  margin-top: 10px;
-  font-size: 15px;
-  cursor: pointer;
-}
-
+@import './mixin.scss';
+@import './variables.scss';
 .login {
   background-color: $theme-background;
   /* height: 100%;
@@ -38,17 +20,8 @@ $deactivated: rgb(162, 224, 255);
       font-family: 'Lobster', cursive;
       font-size: 40px;
       margin: 50px auto 50px auto;
-
-      a:link {
-        color: black;
-        text-decoration: none;
-      }
-
-      a:visited {
-        color: black;
-        text-decoration: none;
-      }
     }
+
     .idInput,
     .passwordInput {
       box-sizing: border-box;

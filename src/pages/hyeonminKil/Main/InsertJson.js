@@ -53,13 +53,6 @@ function InsertJson() {
         />
         <p>Json으로 받아오자!</p>
       </div>
-      <div className="firstArticlesecondBox">
-        <img
-          className="firstArticlesecondBoxUser"
-          src="https://images.unsplash.com/photo-1656313836297-0cd072f08f43?ixlib=rb-1.2.1&ixclassName=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-          alt="firstArticlesecondBoxUser"
-        />
-      </div>
       <div className="firstArticlFirstBoxIcon">
         <img
           className="loveIcon"
