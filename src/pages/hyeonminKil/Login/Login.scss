@@ -1,12 +1,25 @@
-$color: #d6d6d6;
+$theme-background: #d6d6d6;
+$activated: blue;
+$deactivated: rgb(162, 224, 255);
+
 @mixin flex-center {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@mixin loginbutton {
+  width: 268px;
+  height: 30px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
 
 .login {
-  background-color: $color;
+  background-color: $theme-background;
   /* height: 100%;
       display: flex;
       align-items: center; */
@@ -22,7 +35,7 @@ $color: #d6d6d6;
     position: relative;
 
     .loginWestagram {
-      font-family: "Lobster", cursive;
+      font-family: 'Lobster', cursive;
       font-size: 40px;
       margin: 50px auto 50px auto;
 
@@ -48,18 +61,15 @@ $color: #d6d6d6;
       padding-left: 10px;
     }
 
-    .loginButton {
-      width: 268px;
-      height: 30px;
-      color: white;
-      // background-color: rgb(162, 224, 255);
-      border: none;
-      border-radius: 5px;
-      margin-top: 10px;
-      font-size: 15px;
-      cursor: pointer;
+    .loginButtonactivated {
+      background-color: $activated;
+      @include loginbutton;
     }
 
+    .loginButtondeactivated {
+      background-color: $deactivated;
+      @include loginbutton;
+    }
     .findPassword {
       margin-top: 50px;
       position: absolute;

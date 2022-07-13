@@ -22,31 +22,33 @@ function Login() {
       });
     navigate('/main-hyeonmin');
   };
-  const [valueTrue, setValueTrue] = useState('rgb(162, 224, 255)');
+  const [valueTrue, setValueTrue] = useState(false);
   const [idvalue, setIdvlaue] = useState('');
   const [trueDisabled, setTrueDisabled] = useState(true);
   const handleIdInput = event => {
-    setIdvlaue(event.target.value);
+    const { value } = event.target;
+    setIdvlaue(value);
     let emailSearch = idvalue.indexOf('@');
     let fiveLength = passwordvalue.length;
     if (emailSearch !== -1 && fiveLength > 5) {
-      setValueTrue('blue');
+      setValueTrue(true);
       setTrueDisabled(false);
     } else {
-      setValueTrue('rgb(162, 224, 255)');
+      setValueTrue(false);
       setTrueDisabled(true);
     }
   };
+
   const [passwordvalue, setPasswordvalue] = useState('');
   const handlePasswordInput = event => {
     setPasswordvalue(event.target.value);
     let emailSearch = idvalue.indexOf('@');
     let fiveLength = passwordvalue.length;
     if (emailSearch !== -1 && fiveLength > 5) {
-      setValueTrue('blue');
+      setValueTrue(true);
       setTrueDisabled(false);
     } else {
-      setValueTrue('rgb(162, 224, 255)');
+      setValueTrue(false);
       setTrueDisabled(true);
     }
   };
@@ -72,11 +74,13 @@ function Login() {
         />
         <input
           type="button"
-          className="loginButton"
+          className={
+            valueTrue ? 'loginButtonactivated' : 'loginButtondeactivated'
+          }
           value="로그인"
           onClick={goToMain}
-          style={{ backgroundColor: valueTrue }}
           disabled={trueDisabled}
+          //style={{ backgroundColor: valueTrue }}
         />
         <span className="findPassword">비밀번호를 잊으셨나요?</span>
       </section>
