@@ -164,14 +164,16 @@
               }
             }
           }
-
-          .feed-container {
-            width: 470px;
-            height: 587.5px;
-
-            #feed-image {
+          .feed-main {
+            .feed-container {
               width: 470px;
               height: 587.5px;
+
+              #feed-image {
+                width: 470px;
+                height: 587.5px;
+                object-fit: contain;
+              }
             }
           }
 
@@ -230,6 +232,7 @@
               width: 24px;
               height: 24px;
               margin: 5px 5px 5px 15px;
+              border-radius: 60%;
             }
 
             .feed-like-text {

@@ -1,4 +1,5 @@
 import Feed from './Feed';
+import { useState, useEffect } from 'react';
 import './Main.scss';
 
 const Story = () => {
@@ -168,21 +169,32 @@ const Aside = () => {
   );
 };
 
-function Main() {
+const Main = () => {
+  const [feedList, setFeedList] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/feedData.json')
+      .then(res => res.json())
+      .then(data => {
+        setFeedList(data);
+      });
+  }, []);
+
   return (
     <div className="main-wonyoung">
       <main>
         <div className="total-container">
           <div className="main-container">
             <Stories />
-            <Feed />
-            <Feed />
+            {feedList.map(feed => (
+              <Feed key={feed.id} feed={feed} />
+            ))}
           </div>
           <Aside />
         </div>
       </main>
     </div>
   );
-}
+};
 
 export default Main;

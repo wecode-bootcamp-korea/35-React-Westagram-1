@@ -1,6 +1,6 @@
-import './Login.scss';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import './Login.scss';
 
 const Form = () => {
   const [inputValue, setInputValue] = useState({
@@ -20,8 +20,29 @@ const Form = () => {
   return (
     <form
       className="login-container"
-      onSubmit={() => {
+      onSubmit={e => {
+        e.preventDefault();
         navigate('/main-wonyoung');
+        // fetch('http://10.58.4.188:8000/users/login', {
+        //   method: 'POST',
+        //   body: JSON.stringify({
+        //     email: inputValue.id,
+        //     password: inputValue.pw,
+        //   }),
+        // })
+        //   .then(res => res.json())
+        //   .then(res => {
+        //     if (res.status === 'SUCCESS') {
+        //       if (res.access_token) {
+        //         localStorage.setItem('wy-token', res.access_token);
+        //         navigate('/main-wonyoung');
+        //       }
+        //     } else if (res.message === 'INVALID_USER') {
+        //       alert('정보가 틀립니다.');
+        //     } else if (res.message === 'KEY_ERROR') {
+        //       alert('키 에러입니다.');
+        //     }
+        //   });
       }}
       onChange={() => {
         checkValue();
@@ -50,9 +71,12 @@ const Form = () => {
         로그인
       </button>
       <div className="forgot-pw">
-        <a href="https://www.instagram.com/accounts/password/reset/">
+        <Link
+          to="https://www.instagram.com/accounts/password/reset/"
+          className="didYouForgotPw"
+        >
           비밀번호를 잊으셨나요?
-        </a>
+        </Link>
       </div>
     </form>
   );

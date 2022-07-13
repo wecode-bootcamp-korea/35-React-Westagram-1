@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Acomment from './Acomment';
+
 let id = 4;
 let user = 'ore.zeno';
 
-const Comments = () => {
+const Comments = ({ time }) => {
   const [onButton, setOnbutton] = useState(true);
   const [cmntList, setCmntList] = useState([]);
   let cmnt = '';
@@ -32,14 +33,6 @@ const Comments = () => {
     );
   };
 
-  useEffect(() => {
-    fetch('/data/commentData.json')
-      .then(res => res.json())
-      .then(data => {
-        setCmntList(data);
-      });
-  }, []);
-
   return (
     <>
       <div className="feed-comment">
@@ -47,7 +40,7 @@ const Comments = () => {
           <Acomment cmnt={cmnt} deleteCmnt={deleteCmnt} key={cmnt.id} />
         ))}
       </div>
-      <div className="feed-time">30분 전</div>
+      <div className="feed-time">{time}</div>
       <form
         className="feed-comment-box-section"
         onSubmit={e => {
