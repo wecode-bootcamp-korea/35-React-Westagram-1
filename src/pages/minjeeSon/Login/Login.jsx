@@ -16,14 +16,17 @@ function LoginMinjee() {
     loginPw: '',
   });
 
+  //변수명, 함수명은 직관적으로!
   const handleInput = e => {
+    //e : 이벤트 객체
+    //target : 객체 e의 key 중 하나
     const { name, value } = e.target;
+    //스프레드 연산자 -> 초기값을 보존하는 역할.
+    //[name] => []? 동적으로 관리하겠다는 의미.
     setInputValue({ ...inputValue, [name]: value });
   };
 
   //Mission 2) Login | 로그인 버튼 활성화 (validation)
-  const [isValid, setIsValid] = useState(false);
-
   const isValidLogin =
     inputValue.loginId.includes('@') && inputValue.loginPw.length >= 5;
 
@@ -55,11 +58,7 @@ function LoginMinjee() {
           <h1>Westagram</h1>
         </div>
         <form />
-        <form
-          id="loginForm"
-          className="login-form"
-          onKeyUp={() => setIsValid(isValidLogin)}
-        >
+        <form id="loginForm" className="login-form" onKeyUp={isValidLogin}>
           <input
             id="loginId"
             className="login-id"
@@ -78,8 +77,8 @@ function LoginMinjee() {
           />
           <button
             id="loginButton"
-            className={'login-button' + (isValid ? ' active' : '')}
-            disabled={isValid ? false : true}
+            className={'login-button' + (isValidLogin ? ' active' : '')}
+            disabled={!isValidLogin}
             onClick={goToMain}
           >
             로그인

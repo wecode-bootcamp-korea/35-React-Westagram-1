@@ -10,9 +10,9 @@ const Feed = ({ imgAlt, imgUrl, details }) => {
   const [commentsList, setCommentsList] = useState([]);
   const [isValid, setIsValid] = useState(false);
 
-  const isValidComments = e => {
-    return comments ? setIsValid(true) : setIsValid(false);
-  };
+  const isValidComments = comments
+    ? () => setIsValid(true)
+    : () => setIsValid(false);
 
   const commentsInput = e => {
     setComments(e.target.value);
@@ -70,11 +70,7 @@ const Feed = ({ imgAlt, imgUrl, details }) => {
           return <Comments key={id} oneComment={oneComment} />;
         })}
         <div className="time-ago">방금 전</div>
-        <form
-          className="input-comments"
-          onSubmit={commentsSubmit}
-          onKeyUp={isValidComments}
-        >
+        <form className="input-comments" onKeyUp={isValidComments}>
           <img alt="comments imoji" src="/images/smile.png" />
           <input
             className="do-input"
@@ -86,6 +82,7 @@ const Feed = ({ imgAlt, imgUrl, details }) => {
           <button
             className={'input-button' + (isValid ? ' active' : '')}
             disabled={isValid ? false : true}
+            onClick={commentsSubmit}
           >
             게시
           </button>
