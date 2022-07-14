@@ -1,0 +1,57 @@
+[
+  {
+    "id": 0,
+    "idImg": "/images/seonghunEom/people02.jpg",
+    "commentId": "Sakura Miyawaki",
+    "imgUrl": "/images/seonghunEom/feed01.jpg",
+    "imgAlt": "미야와키 사쿠라",
+    "content": " 桜さんめっちゃやば！❤️",
+    "contents": " ファンミーティングいつですか？",
+    "likesContent": "Sakura Miyawaki님 외 10명이 좋아합니다.",
+    "postTime": "42분 전"
+  },
+  {
+    "id": 1,
+    "commentId": "Sakura Miyawaki",
+    "idImg": "/images/seonghunEom/people00.jpg",
+    "imgUrl": "/images/seonghunEom/people01.jpg",
+    "imgAlt": "미야와키 사쿠라2",
+    "content": " IZONいつも応援してますよ！🇯🇵",
+    "contents": " ルセラフィム成功しよう！",
+    "likesContent": "Sakura Miyawaki님 외 10명이 좋아합니다.",
+    "postTime": "15분 전"
+  },
+  {
+    "id": 3,
+    "commentId": "Yui aragaki",
+    "idImg": "/images/seonghunEom/people04.jpg",
+    "imgUrl": "/images/seonghunEom/people03.jpg",
+    "imgAlt": "아라가키 유이",
+    "content": " 新垣結衣さんご結婚おめでとうございます。",
+    "contents": " 星の源さんと仲良くしてください^_^",
+    "likesContent": "Sakura Miyawaki님 외 10명이 좋아합니다.",
+    "postTime": "15분 전"
+  },
+  {
+    "id": 4,
+    "commentId": "Yui aragaki",
+    "idImg": "/images/seonghunEom/people07.jpg",
+    "imgUrl": "/images/seonghunEom/people04.jpg",
+    "imgAlt": "아라가키 유이2",
+    "content": " いつもよく見ています。🇯🇵",
+    "contents": " 結婚はとてもお祝いします〜",
+    "likesContent": "Sakura Miyawaki님 외 10명이 좋아합니다.",
+    "postTime": "15분 전"
+  },
+  {
+    "id": 5,
+    "commentId": "Hasimoto kanna",
+    "idImg": "/images/seonghunEom/people08.jpg",
+    "imgUrl": "/images/seonghunEom/people05.jpg",
+    "imgAlt": "하시모토 칸나",
+    "content": " 今回の映画公開はいつですか？。🇯",
+    "contents": " 早くドラマ出演してください！",
+    "likesContent": "Sakura Miyawaki님 외 10명이 좋아합니다.",
+    "postTime": "15분 전"
+  }
+]

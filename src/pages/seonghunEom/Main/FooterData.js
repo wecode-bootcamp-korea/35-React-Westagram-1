@@ -9,5 +9,5 @@ export const INFO_LIST = [
   { id: 8, content: '위치' },
   { id: 9, content: '인기계정' },
   { id: 10, content: '해시태그' },
-  { id: 10, content: '언어' },
+  { id: 11, content: '언어' },
 ];

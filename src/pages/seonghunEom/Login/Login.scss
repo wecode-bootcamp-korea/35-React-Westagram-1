@@ -62,7 +62,7 @@
     }
   }
 
-  .loginCard form [type='button'] {
+  .loginCard form [type='submit'] {
     width: 100%;
     border: none;
     margin-top: 10px;
@@ -76,7 +76,7 @@
     cursor: pointer;
   }
 
-  .submitBtn[type='button']:disabled {
+  .submitBtn[type='submit']:disabled {
     background-color: #cbddf7;
     cursor: default;
   }
