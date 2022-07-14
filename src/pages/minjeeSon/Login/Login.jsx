@@ -58,14 +58,18 @@ function LoginMinjee() {
           <h1>Westagram</h1>
         </div>
         <form />
-        <form id="loginForm" className="login-form" onKeyUp={isValidLogin}>
+        <form
+          id="loginForm"
+          className="login-form"
+          onKeyUp={isValidLogin}
+          onChange={handleInput}
+        >
           <input
             id="loginId"
             className="login-id"
             type="text"
             name="loginId"
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            onChange={handleInput}
           />
           <input
             id="loginPW"
@@ -73,7 +77,6 @@ function LoginMinjee() {
             type="password"
             name="loginPw"
             placeholder="비밀번호"
-            onChange={handleInput}
           />
           <button
             id="loginButton"
