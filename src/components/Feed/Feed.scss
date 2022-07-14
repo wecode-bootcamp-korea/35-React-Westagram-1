@@ -1,0 +1,123 @@
+@import '../../styles/mixin.scss';
+
+.article {
+  @include flexContainer();
+  flex-direction: column;
+  max-width: 470px;
+  margin-bottom: 20px;
+  background-color: var(--inner-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+
+  /* top */
+  .top {
+    @include flexContainer();
+    position: relative;
+    width: 100%;
+    height: 58px;
+
+    .more {
+      @include flexContainer();
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      background: none;
+      border: none;
+      font-size: 25px;
+      cursor: pointer;
+    }
+  }
+
+  /* middle */
+  .middle {
+    img {
+      width: 100%;
+      max-height: 587px;
+      object-fit: cover;
+    }
+  }
+
+  /* bottom */
+  .bottom {
+    width: 100%;
+    padding: 11px 11px 0 11px;
+    font-size: 15px;
+
+    /* .img-bottom-icons */
+    .img-bottom-icons {
+      @include flexContainer();
+      justify-content: space-between;
+
+      img {
+        @include profileImgSize();
+
+        &:nth-child(n):hover {
+          opacity: 0.5;
+          cursor: pointer;
+        }
+      }
+
+      .left-icons {
+        @include flexContainer();
+        justify-content: space-between;
+        width: 91px;
+      }
+    }
+
+    /* likes */
+    .likes {
+      @include flexContainer();
+
+      height: 45px;
+
+      .who-likes {
+        margin-left: 5px;
+      }
+    }
+
+    /* time-ago */
+    .time-ago {
+      margin: 15px 0;
+      color: gray;
+      font-size: 11px;
+    }
+
+    /* input-comments */
+    .input-comments {
+      @include flexContainer();
+
+      justify-content: space-between;
+      width: 100%;
+      height: 49px;
+      border-top: 1px solid var(--border-color);
+
+      img {
+        width: 31px;
+      }
+
+      .do-input {
+        width: 100%;
+        margin: 0 5px;
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .input-button {
+        width: 30px;
+        background: none;
+        color: #0095f6;
+        border: none;
+        font-weight: 600;
+        opacity: 0.5;
+      }
+
+      .active {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+}

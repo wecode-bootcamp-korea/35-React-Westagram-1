@@ -1,7 +1,4 @@
-@mixin flexContainer {
-  display: flex;
-  align-items: center;
-}
+@import '../../styles/mixin.scss';
 
 /* nav */
 .navwrap {

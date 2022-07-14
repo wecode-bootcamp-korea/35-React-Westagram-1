@@ -1,0 +1,14 @@
+@mixin flexColumnContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexContainer {
+  display: flex;
+  align-items: center;
+}
+
+@mixin profileImgSize {
+  width: 24px;
+  height: 24px;
+}

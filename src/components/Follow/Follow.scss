@@ -1,0 +1,40 @@
+@import '../../styles/mixin.scss';
+
+/* followlist */
+.followlist {
+  @include flexContainer();
+  flex-direction: column;
+  width: 100%;
+  height: 320px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .users {
+    @include flexContainer();
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+
+    .user-img {
+      @include flexContainer();
+    }
+
+    .user-details {
+      padding-top: 5px;
+      color: gray;
+      font-size: 12px;
+    }
+
+    .follow {
+      position: absolute;
+      right: 10px;
+      color: #0095f6;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
