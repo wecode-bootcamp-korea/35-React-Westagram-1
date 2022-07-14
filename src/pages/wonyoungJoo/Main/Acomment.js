@@ -10,7 +10,7 @@ const Acomment = ({ cmnt, deleteCmnt }) => {
       <span className="userOfComment">{cmnt.user}</span>
       <span className="commentOfUser">{cmnt.contents}</span>
       <span
-        className={isClicked ? 'comment-like' : 'comment-liked'}
+        className={'comment-like' + (isClicked ? '' : 'd')}
         onClick={() => {
           handleCommentLikeButton();
         }}

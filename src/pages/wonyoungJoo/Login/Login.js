@@ -32,7 +32,7 @@ const Form = () => {
         // })
         //   .then(res => res.json())
         //   .then(res => {
-        //     if (res.status === 'SUCCESS') {
+        //     if (res.message === 'SUCCESS') {
         //       if (res.access_token) {
         //         localStorage.setItem('wy-token', res.access_token);
         //         navigate('/main-wonyoung');

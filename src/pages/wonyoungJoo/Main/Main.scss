@@ -285,7 +285,7 @@
 
               .commentOfUser {
                 flex: 5;
-                padding: 0 0 10px 0;
+                padding: 0 0 5px 0;
               }
 
               .comment-like {
@@ -384,10 +384,9 @@
 
       .aside-container {
         @include flex(flex-start, null, column);
-        position: sticky;
         top: 90px;
         height: 500px;
-        margin: 30px 0 0 20px;
+        margin: 70px 0 0 20px;
 
         .aside-header {
           @include flex(null, center, null);
