@@ -1,0 +1,51 @@
+[
+  {
+    "id": 0,
+    "user": "ore.zeno",
+    "profile": "images/wonyoungJoo/profile.jpg",
+    "location": "카페 공유",
+    "feedImage": "images/wonyoungJoo/feed.JPG",
+    "likeUser": "__j0010",
+    "likeUserProfile": "images/wonyoungJoo/default profile.jpg",
+    "numOfLike": 302,
+    "contents": "보문역에 위치한 카페 공유...",
+    "time": "30분 전"
+  },
+  {
+    "id": 1,
+    "user": "zzirongt",
+    "profile": "images/wonyoungJoo/zzirongt-profile.jpg",
+    "location": "외돌개",
+    "feedImage": "images/wonyoungJoo/zzirongt-feed.jpg",
+    "likeUser": "yeunnny",
+    "likeUserProfile": "images/wonyoungJoo/yeunnny-profile.jpg",
+    "numOfLike": 269,
+    "contents": "사랑이 담긴!",
+    "time": "3시간 전"
+  },
+  {
+    "id": 2,
+    "user": "woonjaelee",
+    "profile": "images/wonyoungJoo/woonjaelee-profile.jpg",
+    "location": "이태원",
+    "feedImage": "images/wonyoungJoo/woonjaelee-feed.jpg",
+    "likeUser": "zzirongt",
+    "likeUserProfile": "images/wonyoungJoo/zzirongt-profile.jpg",
+    "numOfLike": 77,
+    "contents": "😁",
+    "time": "1일 전"
+  },
+
+  {
+    "id": 3,
+    "user": "nujnow",
+    "profile": "images/wonyoungJoo/nujnow-profile.jpg",
+    "location": "경기도 시흥시",
+    "feedImage": "images/wonyoungJoo/nujnow-feed.jpg",
+    "likeUser": "woonjaelee",
+    "likeUserProfile": "images/wonyoungJoo/woonjaelee-profile.jpg",
+    "numOfLike": 54,
+    "contents": "💐",
+    "time": "2일 전"
+  }
+]

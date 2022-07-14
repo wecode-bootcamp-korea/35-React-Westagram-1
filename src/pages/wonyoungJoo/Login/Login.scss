@@ -1,0 +1,82 @@
+@import '../../../styles/mixin.scss';
+@import '../../../styles/variables.scss';
+
+.login-wonyoung {
+  .login-main {
+    @include flex(center, null, null);
+    background-color: $background-color;
+
+    .login-container {
+      @include flex(flex-start, center, column);
+      height: 400px;
+      width: 350px;
+      background-color: white;
+      @include border(0);
+
+      .westagram-logo-login {
+        font-family: 'Lobster', cursive;
+        font-size: 50px;
+        padding: 40px 0;
+        width: 400px;
+        text-align: center;
+      }
+
+      .login {
+        width: 270px;
+        padding: 10px 7px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        @include border(3px);
+        background-color: $background-color;
+
+        &::placeholder {
+          color: rgb(138, 138, 138);
+          font-size: 12px;
+        }
+      }
+
+      .emoji-icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      .login-button {
+        width: 270px;
+        margin-top: 10px;
+        padding: 10px 0;
+        border: none;
+        border-radius: 3px;
+        background-color: #0095f6;
+        color: white;
+
+        &:hover:enabled {
+          cursor: pointer;
+        }
+
+        &:disabled {
+          opacity: 0.5;
+        }
+      }
+
+      .forgot-pw {
+        margin-top: 70px;
+        font-size: 13px;
+        .didYouForgotPw {
+          color: #39638b;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  header {
+    width: 100vw;
+    height: 10vh;
+    background-color: $background-color;
+  }
+
+  footer {
+    width: 100vw;
+    height: 100vh;
+    background-color: $background-color;
+  }
+}
