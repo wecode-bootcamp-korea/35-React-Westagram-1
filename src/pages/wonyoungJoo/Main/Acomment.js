@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const Acomment = ({ cmnt, deleteCmnt }) => {
   const [isClicked, setIsClicked] = useState(true);
-  const handleCommentLikeButton = () => {
+  const likeComment = () => {
     setIsClicked(!isClicked);
   };
   return (
@@ -12,7 +12,7 @@ const Acomment = ({ cmnt, deleteCmnt }) => {
       <span
         className={'comment-like' + (isClicked ? '' : 'd')}
         onClick={() => {
-          handleCommentLikeButton();
+          likeComment();
         }}
       />
       <span

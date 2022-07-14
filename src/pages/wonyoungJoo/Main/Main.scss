@@ -101,7 +101,7 @@
             .profile-story {
               width: 66px;
               height: 66px;
-              @include story(2px, 3px);
+              @include story(0.1em, 0.18em);
             }
 
             .user-name-story {
