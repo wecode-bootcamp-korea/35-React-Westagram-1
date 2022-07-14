@@ -1,0 +1,20 @@
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin border($radius) {
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: $radius;
+}
+
+@mixin story($padding, $border) {
+  background: linear-gradient(white 0 0) padding-box,
+    /*this is your grey background*/ linear-gradient(to left, #da3ecc, #ffc501)
+      border-box;
+  padding: $padding;
+  border: $border solid transparent;
+  border-radius: 70%;
+}
