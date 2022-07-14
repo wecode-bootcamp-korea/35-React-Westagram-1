@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "userName": "Yui aragaki",
+    "content": " 보고싶어요 사쿠라!❣️❣️",
+    "isLiked": true
+  },
+  {
+    "id": 1,
+    "userName": "Nana gomatu",
+    "content": " 르세라핌 화이팅!!!!💙",
+    "isLiked": false
+  },
+  {
+    "id": 2,
+    "userName": "Satomi isihara",
+    "content": " kwaiii!💘🤎💛",
+    "isLiked": false
+  }
+]
