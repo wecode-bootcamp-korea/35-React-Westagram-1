@@ -1,5 +1,5 @@
 import React from 'react';
-import ArticleJson from './ArticleComponent';
+import ArticleJson from './ArticleJson';
 import InsertJson from './InsertJson';
 //import { INPUT_DATA } from './inputData';
 import './Main.scss';
