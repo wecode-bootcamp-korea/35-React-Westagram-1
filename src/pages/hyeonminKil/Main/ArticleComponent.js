@@ -4,6 +4,7 @@ function ArticleComponent(articleComponent) {
   const [names, setNames] = useState([]);
   const [comment, setComment] = useState('');
   const [nextId, setNextId] = useState(1);
+  const { id, name, like } = articleComponent;
 
   const onChange = e => setComment(e.target.value);
   const onClick = () => {
@@ -35,14 +36,14 @@ function ArticleComponent(articleComponent) {
     </div>
   ));
   return (
-    <article className="firstArticle" key={articleComponent.id}>
+    <article className="firstArticle" key={id}>
       <div className="firstArticleFirstBox">
         <img
           className="firstArticleUserIcon"
           src="https://images.unsplash.com/profile-1656290325730-60c2880dea0b?dpr=1&auto=format&fit=crop&w=150&h=150&q=60&crop=faces&bg=fff"
           alt="firstArticleUserIcon"
         />
-        <p>{articleComponent.name}</p>
+        <p>{name}</p>
       </div>
       <div className="firstArticleSecondBox">
         <img
@@ -80,7 +81,7 @@ function ArticleComponent(articleComponent) {
           fontSize: '14px',
         }}
       >
-        {articleComponent.like}
+        {like}
       </span>
       <span
         style={{
