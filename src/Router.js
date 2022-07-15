@@ -25,13 +25,13 @@ const Router = () => {
       <Nav />
       <Routes>
         <Route path="/login-minjee" element={<LoginMinjee />} />
-        <Route path="/main-minjeeSon" element={<MainMinjee />} />
+        {/* <Route path="/main-minjeeSon" element={<MainMinjee />} /> */}
         <Route path="/login-hyeonmin" element={<LoginHyeonmin />} />
         <Route path="/main-hyeonmin" element={<MainHyeonmin />} />
-        <Route path="/login-seonghun" element={<LoginSeonghun />} />
-        <Route path="/main-seonghun" element={<MainSeonghun />} />
-        <Route path="/login-wonyoung" element={<LoginWonyoung />} />
-        <Route path="/main-wonyoung" element={<MainWonyoung />} />
+        {/* <Route path="/login-seonghun" element={<LoginSeonghun />} /> */}
+        {/* <Route path="/main-seonghun" element={<MainSeonghun />} /> */}
+        {/* <Route path="/login-wonyoung" element={<LoginWonyoung />} /> */}
+        {/* <Route path="/main-wonyoung" element={<MainWonyoung />} /> */}
       </Routes>
     </BrowserRouter>
   );
