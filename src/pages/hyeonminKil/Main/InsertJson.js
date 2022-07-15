@@ -30,18 +30,6 @@ function InsertJson() {
       <p>{props.text}</p>
     </div>
   ));
-  const [commentData, setCommentData] = useState([]);
-  useEffect(() => {
-    fetch('data/commentJsonData.json')
-      .then(response => response.json())
-      .then(data => setCommentData(data));
-  }, []);
-
-  const commentJsonDataList = commentData.map(props => (
-    <div key={props.id}>
-      <p>{props.text}</p>
-    </div>
-  ));
 
   return (
     <article className="firstArticle">
@@ -96,7 +84,6 @@ function InsertJson() {
       <div className="commentList">
         {jsDataList}
         {InsertJsDataList}
-        {commentJsonDataList}
       </div>
       <div className="comment">
         <input className="commentInput" placeholder="댓글 달기..." />

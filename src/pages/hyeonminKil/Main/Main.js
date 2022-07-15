@@ -11,7 +11,6 @@ function Main() {
   //     .then(res => res.json())
   //     .then(data => setNames(data));
   // }, []);
-
   return (
     <div className="body">
       <div className="top">
@@ -63,8 +62,6 @@ function Main() {
         <div className="feeds">
           <ArticleJson />
           <InsertJson />
-          <ArticleJson />
-          <ArticleJson />
         </div>
         <div className="mainRight">
           <div className="mainRightUser">
